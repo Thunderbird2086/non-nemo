@@ -1,0 +1,282 @@
+meta:
+  author: Allen Choi
+  version: 0.0.9
+  engine: 4.1.0
+  project: Non-Nemo Split Keyboard
+
+units:
+  # proxy spacing
+  kx: cx
+  ky: cy
+  # padding
+  px: kx+1
+  py: ky+1
+  corner: 2
+
+points:
+  zones:
+    matrix:
+      anchor:
+        shift: [30, -100]
+      key: {padding: px, spread: px}
+      rows: &rows
+        bottom: {row_net: row_bottom}
+        home: {row_net: row_home}
+        top: {row_net: row_top}
+      columns:
+        pinky: {key: {column_net: col_pinky}}
+        ring: {key: {column_net: col_ring}}
+        middle: {key: {column_net: col_middle}} 
+        index: {key: {column_net: col_index}}
+        inner: {key: {column_net: col_inner}}
+    cluster:
+      key: {padding: px, spread: px}
+      anchor: {ref: matrix_index_bottom, shift: [.5px, -py-2]}
+      columns:
+        esc: {key: {shift: [0, 0], column_net: col_middle}}
+        layer: {key: {shift: [0, 0], column_net: col_index}}
+        space: {key: {shift: [0, 0], column_net: col_inner}}
+      rows: {thumb: {row_net: row_thumb}}
+  mirror:
+    ref: matrix_inner_home
+    distance: 4.5U
+
+outlines:
+  raw: &raw
+    - &rect_base
+      what: rectangle
+      bound: false
+      joints: 2
+    - <<: *rect_base
+      where: true
+      size: [1.2px, 1.2py]
+      fillet: corner
+
+  cover_bottom: &cover_bottom
+    - <<: *rect_base
+      where: [{ref: matrix_middle_bottom, shift:[-3.8, -px-1]}]
+      size: [4.8px, 1.2py]
+      fillet: corner
+
+  top_raw: &top_raw
+    - <<: *raw
+
+  pcb_mcu: &pcb_mcu
+    - <<: *rect_base
+      where: [{ref: matrix_inner_bottom, shift:[.6px, 4]}]
+      size: [3px, 3py+7]
+      fillet: corner
+
+  pcb_raw: &pcb_raw
+    - <<: *raw
+    - <<: *pcb_mcu
+    - <<: *pcb_mcu
+      where: [{ref: mirror_matrix_inner_bottom, shift:[.6px, 4]}]
+
+  keys: &keys
+    - what: rectangle
+      where: true
+      asym: source
+      size: 14
+
+  switches: &switches
+    - what: rectangle
+      where: true
+      size: [kx-0.5, ky-0.5]
+
+  screw_holes_left: &screw_holes
+    top_right: &screw_base
+      what: circle
+      radius: 1.15
+      where: [{ref: matrix_inner_top, shift: [.5px-.1, .5py-.2]}]
+    top_left:
+      <<: *screw_base
+      where: [{ref: matrix_pinky_top, shift: [-.5px+.1, .5py-.2]}]
+    bottom_left:
+      <<: *screw_base
+      where: [{ref: matrix_pinky_bottom, shift: [-.5px+.1, -.5py+.2]}]
+    center_left:
+      <<: *screw_base
+      where: [{ref: matrix_middle_home, shift: [-.5px, .5py+.5]}]
+    bottom_right:
+      <<: *screw_base
+      where: [{ref: matrix_inner_bottom, shift: [.5px-.1, -.5py]}]
+    mcu_right:
+      <<: *screw_base
+      where: [{ref: matrix_inner_bottom, shift: [2px-.1, 1.5py+5.5]}]
+    thumb_left:
+      <<: *screw_base
+      where: [{ref: cluster_esc_thumb, shift: [-.5px+.1, -.5py+.2]}]
+    thumb_right:
+      <<: *screw_base
+      where: [{ref: cluster_space_thumb, shift: [.5px-.1, -.5py+.2]}]
+
+  screw_holes_right:
+    $extends: outlines.screw_holes_left
+    top_left:
+      where: [{ref: mirror_matrix_inner_top, shift: [.5px-.1, .5py-.2]}]
+    top_right:
+      where: [{ref: mirror_matrix_pinky_top, shift: [-.5px+.1, .5py-.2]}]
+    bottom_left:
+      where: [{ref: mirror_matrix_pinky_bottom, shift: [-.5px+.1, -.5py+.2]}]
+    center_left:
+      where: [{ref: mirror_matrix_middle_home, shift: [-.5px, .5py+.5]}]
+    bottom_right:
+      where: [{ref: mirror_matrix_inner_bottom, shift: [.5px-.1, -.5py]}]
+    mcu_right:
+      where: [{ref: mirror_matrix_inner_bottom, shift: [2px-.1, 1.5py+5.5]}]
+    thumb_left:
+      where: [{ref: mirror_cluster_esc_thumb, shift: [-.5px+.1, -.5py+.2]}]
+    thumb_right:
+      where: [{ref: mirror_cluster_space_thumb, shift: [.5px-.1, -.5py+.2]}]
+
+  rp2040_btn_left:
+    reset: &buttons_base
+      where: [{ref: matrix_inner_top, shift: [.8px+5, -.5py]}]
+      #where: [{ref: matrix_inner_top, shift: [.5px-5, 24.7]}]
+      what: circle
+      radius: 1.6
+    update:
+      <<: *buttons_base
+      where: [{ref: matrix_inner_top, shift: [.8px+14.2, -.5py]}]
+      #where: [{ref: matrix_inner_top, shift: [.5px-5, 15.5]}]
+
+  rp2040_btn_right:
+    $extends: outlines.rp2040_btn_left
+    reset:
+      where: [{ref: mirror_matrix_inner_top, shift: [.8px+5, -.5py]}]
+    update:
+      where: [{ref: mirror_matrix_inner_top, shift: [.8px+14.2, -.5py]}]
+    
+  outline:
+    - "raw"
+    - "-screw_holes_left"
+    - "-screw_holes_right"
+
+  pcb_outline:
+    - "pcb_raw"
+    
+  top:
+    - "outline"
+    - "-keys"
+
+  pcb:
+    - "pcb_outline"
+    - "-screw_holes_left"
+    - "-screw_holes_right"
+
+  bottom:
+    - "pcb"
+    - "-rp2040_btn_left"
+    - "-rp2040_btn_right"
+
+filled_zone: &filled_zone
+  filled_zones:
+    what: utility_filled_zone
+    params:
+      side: 'F&B'
+      points: [[0, 0], [297, 0], [297, 210], [0, 210]]
+
+text_base: &text_base
+  what: utility_text
+  params:                                                                                                   
+    face: 'KiCad Font'                                                                                      
+    knockout: true
+    width: 1.5                                                                                              
+    height: 1.5                                                                                             
+    side: F
+
+footprint_components:
+  base_diode: &base_diode
+    what: d_1206_3216m
+    params:
+      show_3d: true
+      side: 'B'
+      reversible: false
+      from: "{{colrow}}" # from
+      to: "{{row_net}}" # to
+
+pcbs:
+  top:
+    template: kicad8
+    outlines:
+      edge: {outline: top, layer: Edge.Cuts}
+    footprints:
+      <<: *filled_zone
+
+  bottom:
+    template: kicad8
+    outlines:
+      edge: {outline: bottom, layer: Edge.Cuts}
+    footprints:
+      <<: *filled_zone
+      reset:
+        <<: *text_base
+        where: [{ref: matrix_inner_top, shift: [.5px+1, 24.7]}]
+        params.text: "RESET"
+      boot:
+        <<: *text_base
+        where: [{ref: matrix_inner_top, shift: [.5px+1, 15.5]}]
+        params.text: "BOOT"
+
+  non_nemo:
+    template: kicad8
+    outlines:
+      edge: 
+        outline: pcb
+        layer: Edge.Cuts
+    footprints:
+      <<: *filled_zone
+      hotswap:
+        what: choc_v1_v2_HS_1u
+        where: true
+        params: 
+          P1: "{{colrow}}"
+          P2: "{{column_net}}"
+          side: B
+          reversible: false
+          show_3d: true
+      diode:
+        <<: *base_diode
+        where: true
+        adjust: {shift: [-7.5, 5], rotate: -90}
+      mcu_l: &mcu
+        what: "xiao_nrf52840"
+        where: matrix_inner_home
+        adjust:
+          shift: [1.3px, 4.59]
+        params:
+          designator: "mcu_l"
+          show_3d: true
+          edgecut: true
+
+      mcu_r:
+        <<: *mcu
+        params.designator: "mcu_r"
+        where: mirror_matrix_inner_home
+      nice_view_l: &nice_view
+        what: "nice_view"
+        where: matrix_inner_home
+        adjust:
+          shift: [1.3px, -6.41]
+        params:
+          designator: "disp_l"
+          show_3d: true
+      nice_view_r:
+        <<: *nice_view
+        where: mirror_matrix_inner_home
+        params.designator: "disp_r"
+      power_btn_l: &power_btn
+        what: SW_SPDT_PCM12
+        where:
+          - ref: matrix_inner_home
+            shift: [1.3px+12.6, -11.41]
+            rotate: 90
+        params: {P1: BAT, P2: BAT_IN, side: 'B', show_3d: true}
+      power_btn_r: 
+        what: SW_SPDT_PCM12
+        where:
+          - ref: mirror_matrix_inner_home
+            shift: [1.3px+12.6, -11.41]
+            rotate: 90
+        params: {P3: BAT, P2: BAT_IN, side: 'B', show_3d: true}
