@@ -1,6 +1,6 @@
 meta:
   author: Allen Choi
-  version: 0.0.9
+  version: 0.1.3
   engine: 4.1.0
   project: Non-Nemo Split Keyboard
 
@@ -54,7 +54,8 @@ outlines:
 
   cover_bottom: &cover_bottom
     - <<: *rect_base
-      where: [{ref: matrix_middle_bottom, shift:[-3.8, -px-1]}]
+      where: [matrix_middle_bottom]
+      adjust: {shift:[-3.8, -px-1]}
       size: [4.8px, 1.2py]
       fillet: corner
 
@@ -63,15 +64,16 @@ outlines:
 
   pcb_mcu: &pcb_mcu
     - <<: *rect_base
-      where: [{ref: matrix_inner_bottom, shift:[.6px, 4]}]
-      size: [3px, 3py+7]
+      where: [matrix_inner_home]
+      adjust: {shift:[.6px, -17]}
+      size: [3px, 2.5py]
       fillet: corner
 
   pcb_raw: &pcb_raw
     - <<: *raw
     - <<: *pcb_mcu
     - <<: *pcb_mcu
-      where: [{ref: mirror_matrix_inner_bottom, shift:[.6px, 4]}]
+      where: [mirror_matrix_inner_home]
 
   keys: &keys
     - what: rectangle
@@ -88,65 +90,55 @@ outlines:
     top_right: &screw_base
       what: circle
       radius: 1.15
-      where: [{ref: matrix_inner_top, shift: [.5px-.1, .5py-.2]}]
+      where: [matrix_inner_top]
+      adjust: {shift: [.5px-.1, .5py-.2]}
     top_left:
       <<: *screw_base
-      where: [{ref: matrix_pinky_top, shift: [-.5px+.1, .5py-.2]}]
+      where: [matrix_pinky_top]
+      adjust: {shift: [-.5px+.1, .5py-.2]}
     bottom_left:
       <<: *screw_base
-      where: [{ref: matrix_pinky_bottom, shift: [-.5px+.1, -.5py+.2]}]
+      where: [matrix_pinky_bottom]
+      adjust: {shift: [-.5px+.1, -.5py+.2]}
     center_left:
       <<: *screw_base
-      where: [{ref: matrix_middle_home, shift: [-.5px, .5py+.5]}]
+      where: [matrix_middle_home]
+      adjust: {shift: [-.5px, .5py+.5]}
     bottom_right:
       <<: *screw_base
-      where: [{ref: matrix_inner_bottom, shift: [.5px-.1, -.5py]}]
+      where: [matrix_inner_bottom]
+      adjust: {shift: [.5px-.1, -.5py]}
     mcu_right:
       <<: *screw_base
-      where: [{ref: matrix_inner_bottom, shift: [2px-.1, 1.5py+5.5]}]
+      where: [matrix_inner_bottom]
+      adjust: {shift: [2px-.1, py+4.5]}
     thumb_left:
       <<: *screw_base
-      where: [{ref: cluster_esc_thumb, shift: [-.5px+.1, -.5py+.2]}]
+      where: [cluster_esc_thumb]
+      adjust: {shift: [-.5px+.1, -.5py+.2]}
     thumb_right:
       <<: *screw_base
-      where: [{ref: cluster_space_thumb, shift: [.5px-.1, -.5py+.2]}]
+      where: [cluster_space_thumb]
+      adjust: {shift: [.5px-.1, -.5py+.2]}
 
   screw_holes_right:
     $extends: outlines.screw_holes_left
-    top_left:
-      where: [{ref: mirror_matrix_inner_top, shift: [.5px-.1, .5py-.2]}]
     top_right:
-      where: [{ref: mirror_matrix_pinky_top, shift: [-.5px+.1, .5py-.2]}]
+      where: [mirror_matrix_inner_top]
+    top_left:
+      where: [mirror_matrix_pinky_top]
     bottom_left:
-      where: [{ref: mirror_matrix_pinky_bottom, shift: [-.5px+.1, -.5py+.2]}]
+      where: [mirror_matrix_pinky_bottom]
     center_left:
-      where: [{ref: mirror_matrix_middle_home, shift: [-.5px, .5py+.5]}]
+      where: [mirror_matrix_middle_home]
     bottom_right:
-      where: [{ref: mirror_matrix_inner_bottom, shift: [.5px-.1, -.5py]}]
+      where: [mirror_matrix_inner_bottom]
     mcu_right:
-      where: [{ref: mirror_matrix_inner_bottom, shift: [2px-.1, 1.5py+5.5]}]
+      where: [mirror_matrix_inner_bottom]
     thumb_left:
-      where: [{ref: mirror_cluster_esc_thumb, shift: [-.5px+.1, -.5py+.2]}]
+      where: [mirror_cluster_esc_thumb]
     thumb_right:
-      where: [{ref: mirror_cluster_space_thumb, shift: [.5px-.1, -.5py+.2]}]
-
-  rp2040_btn_left:
-    reset: &buttons_base
-      where: [{ref: matrix_inner_top, shift: [.8px+5, -.5py]}]
-      #where: [{ref: matrix_inner_top, shift: [.5px-5, 24.7]}]
-      what: circle
-      radius: 1.6
-    update:
-      <<: *buttons_base
-      where: [{ref: matrix_inner_top, shift: [.8px+14.2, -.5py]}]
-      #where: [{ref: matrix_inner_top, shift: [.5px-5, 15.5]}]
-
-  rp2040_btn_right:
-    $extends: outlines.rp2040_btn_left
-    reset:
-      where: [{ref: mirror_matrix_inner_top, shift: [.8px+5, -.5py]}]
-    update:
-      where: [{ref: mirror_matrix_inner_top, shift: [.8px+14.2, -.5py]}]
+      where: [mirror_cluster_space_thumb]
     
   outline:
     - "raw"
@@ -167,8 +159,6 @@ outlines:
 
   bottom:
     - "pcb"
-    - "-rp2040_btn_left"
-    - "-rp2040_btn_right"
 
 filled_zone: &filled_zone
   filled_zones:
@@ -177,14 +167,47 @@ filled_zone: &filled_zone
       side: 'F&B'
       points: [[0, 0], [297, 0], [297, 210], [0, 210]]
 
-text_base: &text_base
-  what: utility_text
-  params:                                                                                                   
-    face: 'KiCad Font'                                                                                      
-    knockout: true
-    width: 1.5                                                                                              
-    height: 1.5                                                                                             
-    side: F
+# Common text definitions
+text_defs:
+  base_text: &base_text
+    what: utility_text
+    params:
+      face: 'KiCad Font'
+      width: 1.5
+      height: 1.5
+      knockout: true
+
+  base_text_small: &base_text_small
+    <<: *base_text
+    params.width: 1
+    params.height: 1
+
+  base_text_android: &base_text_android
+    what: utility_text
+    params: {side: 'F', reversible: false, face: 'Android Robot'}
+
+  version_text: &version_text
+    <<: *base_text_android
+    params:
+      text: 'Non Nemo 0.1.3'
+      side: B
+      mirrored: true
+
+  powered_by: &powered_by_base
+    <<: *base_text_small
+    params.knockout: false
+    params.reversible: false
+    params.text: 'Powered By Ergogen'
+
+  designed_by: &designed_by
+    <<: *base_text_android
+    params.text: 'designed by Thunderbird 2086'
+    params.width: 1.2
+    params.height: 1.2
+
+  base_bat: &base_bat
+    <<: *base_text_small
+    params: {side: B, mirrored: true, text: '- +'}
 
 footprint_components:
   base_diode: &base_diode
@@ -210,21 +233,20 @@ pcbs:
       edge: {outline: bottom, layer: Edge.Cuts}
     footprints:
       <<: *filled_zone
-      reset:
-        <<: *text_base
-        where: [{ref: matrix_inner_top, shift: [.5px+1, 24.7]}]
-        params.text: "RESET"
-      boot:
-        <<: *text_base
-        where: [{ref: matrix_inner_top, shift: [.5px+1, 15.5]}]
-        params.text: "BOOT"
+      ON:
+        <<: *base_text
+        where: [{ref: matrix_inner_home, shift: [1.3px+13.2, -20.5]}]
+        params: {text: "ON", side: "F", reversible: true, knockout: true}
+      OFF:
+        <<: *base_text
+        where: [{ref: matrix_inner_home, shift: [1.3px+12.6, -28.5]}]
+        params: {text: "OFF", side: "F", reversible: true, knockout: true}
+
 
   non_nemo:
     template: kicad8
     outlines:
-      edge: 
-        outline: pcb
-        layer: Edge.Cuts
+      edge: {outline: bottom, layer: Edge.Cuts}
     footprints:
       <<: *filled_zone
       hotswap:
@@ -238,45 +260,141 @@ pcbs:
           show_3d: true
       diode:
         <<: *base_diode
-        where: true
+        where: true 
         adjust: {shift: [-7.5, 5], rotate: -90}
       mcu_l: &mcu
         what: "xiao_nrf52840"
         where: matrix_inner_home
         adjust:
-          shift: [1.3px, 4.59]
-        params:
-          designator: "mcu_l"
-          show_3d: true
-          edgecut: true
-
+#          shift: [1.3px, 4.59]
+          shift: [1.3px, -5.41]
+        params: {designator: "MCU", show_3d: true, edgecut: true}
       mcu_r:
         <<: *mcu
-        params.designator: "mcu_r"
         where: mirror_matrix_inner_home
-      nice_view_l: &nice_view
-        what: "nice_view"
-        where: matrix_inner_home
-        adjust:
-          shift: [1.3px, -6.41]
-        params:
-          designator: "disp_l"
-          show_3d: true
-      nice_view_r:
-        <<: *nice_view
-        where: mirror_matrix_inner_home
-        params.designator: "disp_r"
+
+#      nice_view_l: &nice_view
+#        what: "nice_view"
+#        where: matrix_inner_home
+#        adjust:
+#          shift: [1.3px, -6.41]
+#        params:
+#          designator: "DISP"
+#          show_3d: true
+#      nice_view_r:
+#        <<: *nice_view
+#        where: mirror_matrix_inner_home
+#        params.designator: "rDISP"
+#      reset_btn_l: &reset_btn
+#        what: SW_smt_20_40_35
+#        where:
+#          - ref: matrix_inner_home
+#            shift: [1.3px+13.7, -16.5]
+#            rotate: -90
+#        params: {P1: RST, P2: GND, side: 'B', show_3d: true, designator: "RSW"}
+#      reset_btn_r: 
+#        <<: *reset_btn
+#        where:
+#          - ref: mirror_matrix_inner_home
+#            shift: [1.3px+13.7, -16.5]
+#            rotate: -90
+#        params: {P2: RST, P1: GND, side: 'B', show_3d: true, designator: "RSW"}
+
       power_btn_l: &power_btn
         what: SW_SPDT_PCM12
-        where:
-          - ref: matrix_inner_home
-            shift: [1.3px+12.6, -11.41]
+        where: [matrix_inner_home]
+        adjust:
+            shift: [1.3px+12.6, -24.5]
             rotate: 90
-        params: {P1: BAT, P2: BAT_IN, side: 'B', show_3d: true}
+        params: {P1: BAT, P2: BAT_IN, side: 'B', show_3d: true, designator: "SW_SPDT"}
       power_btn_r: 
-        what: SW_SPDT_PCM12
-        where:
-          - ref: mirror_matrix_inner_home
-            shift: [1.3px+12.6, -11.41]
-            rotate: 90
-        params: {P3: BAT, P2: BAT_IN, side: 'B', show_3d: true}
+        <<: *power_btn
+        where: [mirror_matrix_inner_home]
+        params: {P3: BAT, P2: BAT_IN, side: 'B', show_3d: true, designator: 'SW_SPDT'}
+
+      bat_con_l: &bat_con
+        what:  ezmate_78171-1x02_hs
+        where: [matrix_inner_home]
+        adjust:
+            shift: [1.3px, -24.5]
+            rotate: -90
+        params: {P1: GND, P2: BAT_IN, side: 'B', show_3d: true}
+      bat_text_l: &bat_text
+        <<: *base_bat
+        where: [matrix_inner_home] 
+        adjust: 
+          shift: [1.3px+4, -24.5]
+          rotate: -90
+      bat_con_r:
+        <<: *bat_con
+        where: [mirror_matrix_inner_home]
+      bat_text_r:
+        <<: *bat_text
+        where: [mirror_matrix_inner_home]
+
+      ergogen_logo: &logo_ergo
+        what: utility_ergogen_logo
+        where: [matrix_inner_home]
+        adjust: {shift: [px-2, -19.5]}
+        params.side: B
+      oshw_logo: &logo_oshw
+        what: logo_oshw
+        where: [matrix_inner_home]
+        adjust: {shift: [px+12, -19.5]}
+        params.side: B
+      ergogen_logo_r:
+        <<: *logo_ergo
+        where: [mirror_matrix_inner_home]
+      oshw_logo_r:
+        <<: *logo_oshw
+        where: [mirror_matrix_inner_home]
+
+      powered_by_l: &powered_by
+        <<: *powered_by_base
+        params.side: B
+        params.mirrored: true
+        where: [matrix_inner_home]
+        adjust: {shift: [1.3px, -29]}
+      powered_by_r:
+        <<: *powered_by
+        where: [mirror_matrix_inner_home]
+      text_non_nemo_l: &text_non_nemo
+        what: utility_text
+        params:
+          face: 'Apple SD 산돌고딕 Neo'
+          width: 5
+          height: 5
+          bold: true
+          text: '난네모'
+        where: [matrix_inner_home]
+        adjust: {shift: [1.3px, -21]}
+      text_non_nemo_r:
+        <<: *text_non_nemo
+        where: [mirror_matrix_inner_home]
+      text_non_nemo_sl: &text_non_nemo_s
+        <<: *base_text_android
+        params.text: 'NON-NEMO'
+        params.width: 3
+        params.height: 3
+        where: [matrix_inner_home]
+        adjust: {shift: [1.3px, -26]}
+      text_non_nemo_sr:
+        <<: *text_non_nemo_s
+        where: [mirror_matrix_inner_home]
+
+      version_small_l: &version_small
+        <<: *version_text
+        where: [ref: matrix_ring_bottom]
+        adjust: {shift: [0, -9.5]}
+        params.width: 1.2
+        params.height: 1.2
+      version_small_r:
+        <<: *version_small
+        where: [ mirror_matrix_ring_bottom]
+      designed_by_l: &designed_by_base
+        <<: *designed_by
+        where: [cluster_layer_thumb]
+        adjust: {shift: [0, -9.5]}
+      designed_by_r: 
+        <<: *designed_by_base
+        where: [mirror_cluster_layer_thumb]

@@ -1,0 +1,3 @@
+[submodule "tb2086-kicad"]
+	path = non-nemo/tb2086-kicad
+	url = git@github.com:Thunderbird2086/tb2086-kicad.git
