@@ -1,6 +1,6 @@
 meta:
   author: Allen Choi
-  version: 0.1.3
+  version: 0.1.6
   engine: 4.1.0
   project: Non-Nemo Split Keyboard
 
@@ -39,7 +39,7 @@ points:
       rows: {thumb: {row_net: row_thumb}}
   mirror:
     ref: matrix_inner_home
-    distance: 4.5U
+    distance: 4.5U-0.425
 
 outlines:
   raw: &raw
@@ -61,6 +61,19 @@ outlines:
 
   top_raw: &top_raw
     - <<: *raw
+
+  braekaway_top:
+    - <<: *rect_base
+      where: [matrix_pinky_top]
+      adjust: {shift:[6px+4.6, 10.8+5.5+2.5]}
+      size: [13.5px+3.6, 5]
+      fillet: corner
+  braekaway_bottom:
+    - <<: *rect_base
+      where: [cluster_esc_thumb]
+      adjust: {shift:[52.15, -10.8-5.5-2.5]}
+      size: [6.5px+3.6, 5]
+      fillet: corner
 
   pcb_mcu: &pcb_mcu
     - <<: *rect_base
@@ -150,12 +163,16 @@ outlines:
     
   top:
     - "outline"
+    - "braekaway_top"
+    - "braekaway_bottom"
     - "-keys"
 
   pcb:
     - "pcb_outline"
     - "-screw_holes_left"
     - "-screw_holes_right"
+    - "braekaway_top"
+    - "braekaway_bottom"
 
   bottom:
     - "pcb"
@@ -189,8 +206,7 @@ text_defs:
   version_text: &version_text
     <<: *base_text_android
     params:
-      text: 'Non Nemo 0.1.3'
-      side: B
+      text: 'Non Nemo 0.1.6'
       mirrored: true
 
   powered_by: &powered_by_base
@@ -209,6 +225,19 @@ text_defs:
     <<: *base_text_small
     params: {side: B, mirrored: true, text: '- +'}
 
+breakawy_text: &breakawy_text
+  url_text:
+    <<: *base_text
+    where: [matrix_pinky_top]
+    adjust: {shift:[6px+4.6, 10.8+5.5+2.5]}
+    params.text: 'https://github.com/Thunderbird2086/non-nemo'
+  designed_by:
+    <<: *designed_by
+    params.width: 1.5
+    params.height: 1.5
+    where: [cluster_esc_thumb]
+    adjust: {shift:[52.15, -10.8-5.5-2.5]}
+    
 footprint_components:
   base_diode: &base_diode
     what: d_1206_3216m
@@ -219,6 +248,42 @@ footprint_components:
       from: "{{colrow}}" # from
       to: "{{row_net}}" # to
 
+  mouse_bite: &mouse_bite
+    mb_v1: &mouse_bite_base
+      what: mousebites_5p5mm_easysnap
+      where: [matrix_inner_home]
+      adjust: {shift: [2U+7.3, -40]}
+    mb_b1: &mouse_bite_bottom
+      <<: *mouse_bite_base
+      where: [cluster_esc_thumb]
+      adjust: {shift: [0, -10.8-5.5], rotate: -90}
+    mb_b2:
+      <<: *mouse_bite_bottom
+      where: [cluster_space_thumb]
+    mb_b1r:
+      <<: *mouse_bite_bottom
+      where: [mirror_cluster_esc_thumb]
+      adjust.rotate: 90
+    mb_b2r:
+      <<: *mouse_bite_bottom
+      where: [mirror_cluster_space_thumb]
+      adjust.rotate: 90
+    mb_t1: &mouse_bite_top
+      <<: *mouse_bite_base
+      where: [matrix_pinky_top]
+      adjust: {shift: [0, 10.8+5.5], rotate: 90}
+    mb_t2:
+      <<: *mouse_bite_top
+      where: [matrix_inner_top]
+    mb_t1r:
+      <<: *mouse_bite_top
+      where: [mirror_matrix_pinky_top]
+      adjust.rotate: -90
+    mb_t2r:
+      <<: *mouse_bite_top
+      where: [mirror_matrix_inner_top]
+      adjust.rotate: -90
+
 pcbs:
   top:
     template: kicad8
@@ -226,6 +291,25 @@ pcbs:
       edge: {outline: top, layer: Edge.Cuts}
     footprints:
       <<: *filled_zone
+      <<: *mouse_bite
+      <<: *breakawy_text
+      designed_by_l: &designed_by_base
+        <<: *designed_by
+        where: [matrix_ring_bottom]
+        adjust: {shift: [0, -9.5]}
+      designed_by_r: 
+        <<: *designed_by_base
+        where: [mirror_matrix_ring_bottom]
+      version_small_l: &version_small
+        <<: *version_text
+        where: [ref: matrix_ring_bottom]
+        adjust: {shift: [0, -9.5]}
+        params.side: B
+        params.width: 1.2
+        params.height: 1.2
+      version_small_r:
+        <<: *version_small
+        where: [ mirror_matrix_ring_bottom]
 
   bottom:
     template: kicad8
@@ -233,15 +317,67 @@ pcbs:
       edge: {outline: bottom, layer: Edge.Cuts}
     footprints:
       <<: *filled_zone
-      ON:
-        <<: *base_text
-        where: [{ref: matrix_inner_home, shift: [1.3px+13.2, -20.5]}]
-        params: {text: "ON", side: "F", reversible: true, knockout: true}
-      OFF:
-        <<: *base_text
-        where: [{ref: matrix_inner_home, shift: [1.3px+12.6, -28.5]}]
-        params: {text: "OFF", side: "F", reversible: true, knockout: true}
+      <<: *mouse_bite
+      <<: *breakawy_text
+      mb_v2: 
+        <<: *mouse_bite_base
+        adjust: {shift: [2U+7.3, -5]}
 
+      ON_l: &on_base
+        <<: *base_text
+        where: [matrix_inner_home]
+        adjust: {shift: [1.3px+13.2, -20.5]}
+        params: {text: "ON", side: "F", reversible: true, knockout: true}
+      OFF_l: &off_base
+        <<: *base_text
+        where: [matrix_inner_home]
+        adjust: {shift: [1.3px+12.6, -28.5]}
+        params: {text: "OFF", side: "F", reversible: true, knockout: true}
+      ON_r:
+        <<: *on_base
+        where: [mirror_matrix_inner_home]
+      OFF_r:
+        <<: *off_base
+        where: [mirror_matrix_inner_home]
+      qr_firmware: &qr_base
+        what: tb2086-non-nemo-firmware-30
+        where: [matrix_pinky_home]
+        adjust: {shift: [0.5px, 0]}
+      qr_guide:
+        <<: *qr_base
+        what: tb2086-non-nemo-30
+        where: [mirror_matrix_pinky_home]
+      text_non_nemo_l: &text_non_nemo
+        what: utility_text
+        params:
+          face: '세방고딕 Bold'
+          width: 8
+          height: 8
+          bold: true
+          text: '난네모'
+        where: [matrix_index_home]
+        adjust: {shift: [20, -5]}
+      text_non_nemo_r:
+        <<: *text_non_nemo
+        where: [mirror_matrix_index_home]
+      text_non_nemo_sl: &text_non_nemo_s
+        <<: *base_text_android
+        params.text: 'NON-NEMO'
+        params.width: 5
+        params.height: 5
+        where: [matrix_index_home]
+        adjust: {shift: [20, -15]}
+      text_non_nemo_sr:
+        <<: *text_non_nemo_s
+        where: [mirror_matrix_index_home]
+      quick_desc_l: &quick_desc
+        <<: *base_text
+        where: [matrix_index_home]
+        adjust: {shift: [20, -20]}
+        params.text: '3x5 Split Ergo Mechanical Keyboard'
+      quick_desc_r:
+        <<: *quick_desc
+        where: [mirror_matrix_index_home]
 
   non_nemo:
     template: kicad8
@@ -249,6 +385,11 @@ pcbs:
       edge: {outline: bottom, layer: Edge.Cuts}
     footprints:
       <<: *filled_zone
+      <<: *mouse_bite
+      <<: *breakawy_text
+      mb_v2: 
+        <<: *mouse_bite_base
+        adjust: {shift: [2U+7.3, -5]}
       hotswap:
         what: choc_v1_v2_HS_1u
         where: true
@@ -261,12 +402,11 @@ pcbs:
       diode:
         <<: *base_diode
         where: true 
-        adjust: {shift: [-7.5, 5], rotate: -90}
+        adjust: {shift: [-7.5, 3], rotate: -90}
       mcu_l: &mcu
         what: "xiao_nrf52840"
         where: matrix_inner_home
         adjust:
-#          shift: [1.3px, 4.59]
           shift: [1.3px, -5.41]
         params: {designator: "MCU", show_3d: true, edgecut: true}
       mcu_r:
@@ -361,7 +501,7 @@ pcbs:
       text_non_nemo_l: &text_non_nemo
         what: utility_text
         params:
-          face: 'Apple SD 산돌고딕 Neo'
+          face: '세방고딕 Bold'
           width: 5
           height: 5
           bold: true
@@ -386,6 +526,7 @@ pcbs:
         <<: *version_text
         where: [ref: matrix_ring_bottom]
         adjust: {shift: [0, -9.5]}
+        params.side: B
         params.width: 1.2
         params.height: 1.2
       version_small_r:
