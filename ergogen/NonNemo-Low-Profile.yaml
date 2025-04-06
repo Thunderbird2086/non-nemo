@@ -2,7 +2,7 @@ meta:
   author: Allen Choi
   version: 0.1.6
   engine: 4.1.0
-  project: Non-Nemo Split Keyboard
+  project: Non-Nemo Split Keyboard Low Profile
 
 units:
   # proxy spacing
@@ -192,12 +192,17 @@ text_defs:
       face: 'KiCad Font'
       width: 1.5
       height: 1.5
-      knockout: true
 
   base_text_small: &base_text_small
     <<: *base_text
     params.width: 1
     params.height: 1
+
+  base_text_kr: &base_text_kr
+    what: utility_text
+    params:
+      face: '세방고딕 Bold'
+      text: '난네모'
 
   base_text_android: &base_text_android
     what: utility_text
@@ -225,18 +230,36 @@ text_defs:
     <<: *base_text_small
     params: {side: B, mirrored: true, text: '- +'}
 
+  who_am_i: &who_am_i
+    <<: *base_text
+    params.text: 'Low Profile'
+
 breakawy_text: &breakawy_text
-  url_text:
+  kb_3x5:
     <<: *base_text
     where: [matrix_pinky_top]
-    adjust: {shift:[6px+4.6, 10.8+5.5+2.5]}
+    adjust: {shift:[20, 10.8+5.5+2.5]}
+    params.text: 'Non Nemo 3x5 Split Ergo Mechanican Keyboard'
+    params.reversible: true
+  whoami:
+    <<: *who_am_i
+    where: [matrix_inner_top]
+    adjust: {shift:[40, 10.8+5.5+2.5]}
+    params.knockout: true
+    params.reversible: true
+  url_text:
+    <<: *base_text
+    where: [mirror_matrix_ring_top]
+    adjust: {shift:[0, 10.8+5.5+2.5]}
     params.text: 'https://github.com/Thunderbird2086/non-nemo'
+    params.reversible: true
   designed_by:
     <<: *designed_by
     params.width: 1.5
     params.height: 1.5
     where: [cluster_esc_thumb]
     adjust: {shift:[52.15, -10.8-5.5-2.5]}
+    params.reversible: true
     
 footprint_components:
   base_diode: &base_diode
@@ -283,6 +306,10 @@ footprint_components:
       <<: *mouse_bite_top
       where: [mirror_matrix_inner_top]
       adjust.rotate: -90
+  mouse_bite_v: &mouse_bite_v
+    mb_v2:
+      <<: *mouse_bite_base
+      adjust: {shift: [2U+7.3, -5]}
 
 pcbs:
   top:
@@ -318,10 +345,8 @@ pcbs:
     footprints:
       <<: *filled_zone
       <<: *mouse_bite
+      <<: *mouse_bite_v
       <<: *breakawy_text
-      mb_v2: 
-        <<: *mouse_bite_base
-        adjust: {shift: [2U+7.3, -5]}
 
       ON_l: &on_base
         <<: *base_text
@@ -348,13 +373,9 @@ pcbs:
         what: tb2086-non-nemo-30
         where: [mirror_matrix_pinky_home]
       text_non_nemo_l: &text_non_nemo
-        what: utility_text
-        params:
-          face: '세방고딕 Bold'
-          width: 8
-          height: 8
-          bold: true
-          text: '난네모'
+        <<: *base_text_kr
+        params.width: 8
+        params.height: 8
         where: [matrix_index_home]
         adjust: {shift: [20, -5]}
       text_non_nemo_r:
@@ -378,6 +399,13 @@ pcbs:
       quick_desc_r:
         <<: *quick_desc
         where: [mirror_matrix_index_home]
+      who_am_i_l:
+        <<: *who_am_i
+        where: [matrix_index_home]
+        adjust: {shift: [20, -23]}
+      who_am_i_r:
+        <<: *who_am_i
+        where: [mirror_matrix_index_home]
 
   non_nemo:
     template: kicad8
@@ -386,10 +414,8 @@ pcbs:
     footprints:
       <<: *filled_zone
       <<: *mouse_bite
+      <<: *mouse_bite_v
       <<: *breakawy_text
-      mb_v2: 
-        <<: *mouse_bite_base
-        adjust: {shift: [2U+7.3, -5]}
       hotswap:
         what: choc_v1_v2_HS_1u
         where: true
@@ -413,33 +439,7 @@ pcbs:
         <<: *mcu
         where: mirror_matrix_inner_home
 
-#      nice_view_l: &nice_view
-#        what: "nice_view"
-#        where: matrix_inner_home
-#        adjust:
-#          shift: [1.3px, -6.41]
-#        params:
-#          designator: "DISP"
-#          show_3d: true
-#      nice_view_r:
-#        <<: *nice_view
-#        where: mirror_matrix_inner_home
-#        params.designator: "rDISP"
-#      reset_btn_l: &reset_btn
-#        what: SW_smt_20_40_35
-#        where:
-#          - ref: matrix_inner_home
-#            shift: [1.3px+13.7, -16.5]
-#            rotate: -90
-#        params: {P1: RST, P2: GND, side: 'B', show_3d: true, designator: "RSW"}
-#      reset_btn_r: 
-#        <<: *reset_btn
-#        where:
-#          - ref: mirror_matrix_inner_home
-#            shift: [1.3px+13.7, -16.5]
-#            rotate: -90
-#        params: {P2: RST, P1: GND, side: 'B', show_3d: true, designator: "RSW"}
-
+      # Power button
       power_btn_l: &power_btn
         what: SW_SPDT_PCM12
         where: [matrix_inner_home]
@@ -452,6 +452,7 @@ pcbs:
         where: [mirror_matrix_inner_home]
         params: {P3: BAT, P2: BAT_IN, side: 'B', show_3d: true, designator: 'SW_SPDT'}
 
+      # Battery connector
       bat_con_l: &bat_con
         what:  ezmate_78171-1x02_hs
         where: [matrix_inner_home]
@@ -472,6 +473,7 @@ pcbs:
         <<: *bat_text
         where: [mirror_matrix_inner_home]
 
+      # Logos
       ergogen_logo: &logo_ergo
         what: utility_ergogen_logo
         where: [matrix_inner_home]
@@ -489,6 +491,7 @@ pcbs:
         <<: *logo_oshw
         where: [mirror_matrix_inner_home]
 
+      # Texts
       powered_by_l: &powered_by
         <<: *powered_by_base
         params.side: B
@@ -499,13 +502,9 @@ pcbs:
         <<: *powered_by
         where: [mirror_matrix_inner_home]
       text_non_nemo_l: &text_non_nemo
-        what: utility_text
-        params:
-          face: '세방고딕 Bold'
-          width: 5
-          height: 5
-          bold: true
-          text: '난네모'
+        <<: *base_text_kr
+        params.width: 5
+        params.height: 5
         where: [matrix_inner_home]
         adjust: {shift: [1.3px, -21]}
       text_non_nemo_r:
