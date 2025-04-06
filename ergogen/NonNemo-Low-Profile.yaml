@@ -192,12 +192,17 @@ text_defs:
       face: 'KiCad Font'
       width: 1.5
       height: 1.5
-      knockout: true
 
   base_text_small: &base_text_small
     <<: *base_text
     params.width: 1
     params.height: 1
+
+  base_text_kr: &base_text_kr
+    what: utility_text
+    params:
+      face: '세방고딕 Bold'
+      text: '난네모'
 
   base_text_android: &base_text_android
     what: utility_text
@@ -225,18 +230,36 @@ text_defs:
     <<: *base_text_small
     params: {side: B, mirrored: true, text: '- +'}
 
+  who_am_i: &who_am_i
+    <<: *base_text
+    params.text: 'Low Profile'
+
 breakawy_text: &breakawy_text
-  url_text:
+  kb_3x5:
     <<: *base_text
     where: [matrix_pinky_top]
-    adjust: {shift:[6px+4.6, 10.8+5.5+2.5]}
+    adjust: {shift:[20, 10.8+5.5+2.5]}
+    params.text: 'Non Nemo 3x5 Split Ergo Mechanican Keyboard'
+    params.reversible: true
+  whoami:
+    <<: *who_am_i
+    where: [matrix_inner_top]
+    adjust: {shift:[40, 10.8+5.5+2.5]}
+    params.knockout: true
+    params.reversible: true
+  url_text:
+    <<: *base_text
+    where: [mirror_matrix_ring_top]
+    adjust: {shift:[0, 10.8+5.5+2.5]}
     params.text: 'https://github.com/Thunderbird2086/non-nemo'
+    params.reversible: true
   designed_by:
     <<: *designed_by
     params.width: 1.5
     params.height: 1.5
     where: [cluster_esc_thumb]
     adjust: {shift:[52.15, -10.8-5.5-2.5]}
+    params.reversible: true
     
 footprint_components:
   base_diode: &base_diode
@@ -284,6 +307,7 @@ footprint_components:
       where: [mirror_matrix_inner_top]
       adjust.rotate: -90
   mouse_bite_v: &mouse_bite_v
+    mb_v2:
       <<: *mouse_bite_base
       adjust: {shift: [2U+7.3, -5]}
 
@@ -349,13 +373,9 @@ pcbs:
         what: tb2086-non-nemo-30
         where: [mirror_matrix_pinky_home]
       text_non_nemo_l: &text_non_nemo
-        what: utility_text
-        params:
-          face: '세방고딕 Bold'
-          width: 8
-          height: 8
-          bold: true
-          text: '난네모'
+        <<: *base_text_kr
+        params.width: 8
+        params.height: 8
         where: [matrix_index_home]
         adjust: {shift: [20, -5]}
       text_non_nemo_r:
@@ -378,6 +398,13 @@ pcbs:
         params.text: '3x5 Split Ergo Mechanical Keyboard'
       quick_desc_r:
         <<: *quick_desc
+        where: [mirror_matrix_index_home]
+      who_am_i_l:
+        <<: *who_am_i
+        where: [matrix_index_home]
+        adjust: {shift: [20, -23]}
+      who_am_i_r:
+        <<: *who_am_i
         where: [mirror_matrix_index_home]
 
   non_nemo:
@@ -475,13 +502,9 @@ pcbs:
         <<: *powered_by
         where: [mirror_matrix_inner_home]
       text_non_nemo_l: &text_non_nemo
-        what: utility_text
-        params:
-          face: '세방고딕 Bold'
-          width: 5
-          height: 5
-          bold: true
-          text: '난네모'
+        <<: *base_text_kr
+        params.width: 5
+        params.height: 5
         where: [matrix_inner_home]
         adjust: {shift: [1.3px, -21]}
       text_non_nemo_r:
