@@ -8322,6 +8322,18 @@
 			)
 		)
 	)
+	(gr_text "Low Profile"
+		(at 181.8 129.5 0)
+		(layer "B.SilkS")
+		(uuid "5fc33cea-d274-47f5-9377-63b525dbcf10")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
 	(gr_text "OFF"
 		(at 143.3 109.5 0)
 		(layer "B.SilkS" knockout)
@@ -8397,6 +8409,18 @@
 			(justify mirror)
 		)
 	)
+	(gr_text "Low Profile"
+		(at 115.5 129.5 0)
+		(layer "B.SilkS")
+		(uuid "ff1a514f-a595-46b5-8207-33083e429cb6")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
 	(gr_text "ON"
 		(at 153.4 101.5 0)
 		(layer "F.SilkS" knockout)
@@ -8409,12 +8433,11 @@
 		)
 	)
 	(gr_text "Low Profile"
-		(at 210.3 81 0)
+		(at 190.3 104 0)
 		(layer "F.SilkS")
 		(uuid "246eb704-54c7-4d49-9eb7-817f0200863b")
 		(effects
 			(font
-				(face "KiCad Font")
 				(size 1.5 1.5)
 				(thickness 0.15)
 			)
