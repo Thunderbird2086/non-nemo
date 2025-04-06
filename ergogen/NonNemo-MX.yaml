@@ -39,7 +39,7 @@ points:
       rows: {thumb: {row_net: row_thumb}}
   mirror:
     ref: matrix_inner_home
-    distance: 4.5U-0.425+4.308
+    distance: 4.5U+5-1.225
 
 outlines:
   raw: &raw
@@ -65,13 +65,13 @@ outlines:
   braekaway_top:
     - <<: *rect_base
       where: [matrix_pinky_top]
-      adjust: {shift:[6px+4.6, 10.8+5.5+2.5+1.23]}
+      adjust: {shift:[6px+4.6, 10.8+5.5+2.5+1.2]}
       size: [13.5px+3.6, 5]
       fillet: corner
   braekaway_bottom:
     - <<: *rect_base
       where: [cluster_esc_thumb]
-      adjust: {shift:[52.15+2.783, -10.8-5.5-2.5-1.23]}
+      adjust: {shift:[52.15+2.783, -10.8-5.5-2.5-1.2]}
       size: [6.5px+3.6, 5]
       fillet: corner
 
@@ -120,7 +120,7 @@ outlines:
     bottom_right:
       <<: *screw_base
       where: [matrix_inner_bottom]
-      adjust: {shift: [.5px-.1, -.5py]}
+      adjust: {shift: [.5px, -.5py]}
     mcu_right:
       <<: *screw_base
       where: [matrix_inner_bottom]
@@ -238,19 +238,19 @@ breakawy_text: &breakawy_text
   kb_3x5:
     <<: *base_text
     where: [matrix_pinky_top]
-    adjust: {shift:[20, 10.8+5.5+2.5+1.23]}
+    adjust: {shift:[20, 10.8+5.5+2.5+1.2]}
     params.text: 'Non Nemo 3x5 Split Ergo Mechanican Keyboard'
     params.reversible: true
   whoami:
     <<: *who_am_i
     where: [matrix_inner_top]
-    adjust: {shift:[40, 10.8+5.5+2.5+1.23]}
+    adjust: {shift:[40, 10.8+5.5+2.5+1.2]}
     params.knockout: true
     params.reversible: true
   url_text:
     <<: *base_text
     where: [mirror_matrix_ring_top]
-    adjust: {shift:[0, 10.8+5.5+2.5+1.23]}
+    adjust: {shift:[0, 10.8+5.5+2.5+1.2]}
     params.text: 'https://github.com/Thunderbird2086/non-nemo'
     params.reversible: true
   designed_by:
@@ -258,7 +258,7 @@ breakawy_text: &breakawy_text
     params.width: 1.5
     params.height: 1.5
     where: [cluster_esc_thumb]
-    adjust: {shift:[52.15, -10.8-5.5-2.5-1.23]}
+    adjust: {shift:[52.15, -10.8-5.5-2.5-1.2]}
     params.reversible: true
     
 footprint_components:
@@ -275,11 +275,11 @@ footprint_components:
     mb_v1: &mouse_bite_base
       what: mousebites_5p5mm_easysnap
       where: [matrix_inner_home]
-      adjust: {shift: [2U+7.3+2.205, -40]}
+      adjust: {shift: [2U+7.3+2.1, -40]}
     mb_b1: &mouse_bite_bottom
       <<: *mouse_bite_base
       where: [cluster_esc_thumb]
-      adjust: {shift: [0, -10.8-5.5-1.23], rotate: -90}
+      adjust: {shift: [0, -10.8-5.5-1.2], rotate: -90}
     mb_b2:
       <<: *mouse_bite_bottom
       where: [cluster_space_thumb]
@@ -294,7 +294,7 @@ footprint_components:
     mb_t1: &mouse_bite_top
       <<: *mouse_bite_base
       where: [matrix_pinky_top]
-      adjust: {shift: [0, 10.8+5.5+1.23], rotate: 90}
+      adjust: {shift: [0, 10.8+5.5+1.2], rotate: 90}
     mb_t2:
       <<: *mouse_bite_top
       where: [matrix_inner_top]
@@ -309,7 +309,7 @@ footprint_components:
   mouse_bite_v: &mouse_bite_v
     mb_v2:
       <<: *mouse_bite_base
-      adjust: {shift: [2U+7.3+2.205, -5]}
+      adjust: {shift: [2U+7.3+2.1, -5]}
 
 pcbs:
   top_mx:
@@ -361,12 +361,12 @@ pcbs:
       ON_l: &on_base
         <<: *base_text
         where: [matrix_inner_home]
-        adjust: {shift: [1.3px+13.2, -20.5]}
+        adjust: {shift: [1.3px+14.3, -20.5]}
         params: {text: "ON", side: "F", reversible: true, knockout: true}
       OFF_l: &off_base
         <<: *base_text
         where: [matrix_inner_home]
-        adjust: {shift: [1.3px+12.6, -28.5]}
+        adjust: {shift: [1.3px+14, -28.5]}
         params: {text: "OFF", side: "F", reversible: true, knockout: true}
       ON_r:
         <<: *on_base
@@ -448,7 +448,7 @@ pcbs:
       diode:
         <<: *base_diode
         where: true 
-        adjust: {shift: [0, -5]}
+        adjust: {rotate: 90, shift: [7.5, 0]}
       mcu_l: &mcu
         what: "xiao_nrf52840"
         where: matrix_inner_home
@@ -464,7 +464,7 @@ pcbs:
         what: SW_SPDT_PCM12
         where: [matrix_inner_home]
         adjust:
-            shift: [1.3px+12.6, -24.5]
+            shift: [1.3px+13.6, -24.5]
             rotate: 90
         params: {P1: BAT, P2: BAT_IN, side: 'B', show_3d: true, designator: "SW_SPDT"}
       power_btn_r: 
