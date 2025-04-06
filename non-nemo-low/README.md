@@ -23,7 +23,5 @@
 
 ## Case
 ### Plates
-![](../imgs/non_nemo_pcb_top.png)
-![](../imgs/non_nemo_pcb_bottom.png)
-
-[def]: ../imgs/non_nemo_low_pofile_pcb.png
+![](../imgs/non_nemo_low_profile_pcb_top.png)
+![](../imgs/non_nemo_low_profile_pcb_bottom.png)
