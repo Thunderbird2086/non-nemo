@@ -2,7 +2,7 @@ meta:
   author: Allen Choi
   version: 0.1.6
   engine: 4.1.0
-  project: Non-Nemo Split Keyboard
+  project: Non-Nemo Split Keyboard Low Profile
 
 units:
   # proxy spacing
@@ -283,6 +283,9 @@ footprint_components:
       <<: *mouse_bite_top
       where: [mirror_matrix_inner_top]
       adjust.rotate: -90
+  mouse_bite_v: &mouse_bite_v
+      <<: *mouse_bite_base
+      adjust: {shift: [2U+7.3, -5]}
 
 pcbs:
   top:
@@ -318,10 +321,8 @@ pcbs:
     footprints:
       <<: *filled_zone
       <<: *mouse_bite
+      <<: *mouse_bite_v
       <<: *breakawy_text
-      mb_v2: 
-        <<: *mouse_bite_base
-        adjust: {shift: [2U+7.3, -5]}
 
       ON_l: &on_base
         <<: *base_text
@@ -386,10 +387,8 @@ pcbs:
     footprints:
       <<: *filled_zone
       <<: *mouse_bite
+      <<: *mouse_bite_v
       <<: *breakawy_text
-      mb_v2: 
-        <<: *mouse_bite_base
-        adjust: {shift: [2U+7.3, -5]}
       hotswap:
         what: choc_v1_v2_HS_1u
         where: true
@@ -413,33 +412,7 @@ pcbs:
         <<: *mcu
         where: mirror_matrix_inner_home
 
-#      nice_view_l: &nice_view
-#        what: "nice_view"
-#        where: matrix_inner_home
-#        adjust:
-#          shift: [1.3px, -6.41]
-#        params:
-#          designator: "DISP"
-#          show_3d: true
-#      nice_view_r:
-#        <<: *nice_view
-#        where: mirror_matrix_inner_home
-#        params.designator: "rDISP"
-#      reset_btn_l: &reset_btn
-#        what: SW_smt_20_40_35
-#        where:
-#          - ref: matrix_inner_home
-#            shift: [1.3px+13.7, -16.5]
-#            rotate: -90
-#        params: {P1: RST, P2: GND, side: 'B', show_3d: true, designator: "RSW"}
-#      reset_btn_r: 
-#        <<: *reset_btn
-#        where:
-#          - ref: mirror_matrix_inner_home
-#            shift: [1.3px+13.7, -16.5]
-#            rotate: -90
-#        params: {P2: RST, P1: GND, side: 'B', show_3d: true, designator: "RSW"}
-
+      # Power button
       power_btn_l: &power_btn
         what: SW_SPDT_PCM12
         where: [matrix_inner_home]
@@ -452,6 +425,7 @@ pcbs:
         where: [mirror_matrix_inner_home]
         params: {P3: BAT, P2: BAT_IN, side: 'B', show_3d: true, designator: 'SW_SPDT'}
 
+      # Battery connector
       bat_con_l: &bat_con
         what:  ezmate_78171-1x02_hs
         where: [matrix_inner_home]
@@ -472,6 +446,7 @@ pcbs:
         <<: *bat_text
         where: [mirror_matrix_inner_home]
 
+      # Logos
       ergogen_logo: &logo_ergo
         what: utility_ergogen_logo
         where: [matrix_inner_home]
@@ -489,6 +464,7 @@ pcbs:
         <<: *logo_oshw
         where: [mirror_matrix_inner_home]
 
+      # Texts
       powered_by_l: &powered_by
         <<: *powered_by_base
         params.side: B
