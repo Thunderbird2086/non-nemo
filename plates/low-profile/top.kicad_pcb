@@ -6,7 +6,7 @@
 		(thickness 1.6)
 		(legacy_teardrops no)
 	)
-	(paper "A3")
+	(paper "A4")
 	(title_block
 		(title "top")
 		(date "2025-04-06")
@@ -6125,6 +6125,18 @@
 		)
 	)
 	(gr_text "Low Profile"
+		(at 115.5 129.5 0)
+		(layer "B.SilkS")
+		(uuid "6536d00c-ec56-4eac-9597-645fc069eca9")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(gr_text "Low Profile"
 		(at 146 43.2 0)
 		(layer "B.SilkS" knockout)
 		(uuid "6e60e658-7f07-4162-9d42-ce4b6c70f1ed")
@@ -6132,6 +6144,18 @@
 			(font
 				(face "KiCad Font")
 				(size 1.5 1.5)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(gr_text "Low Profile"
+		(at 181.8 129.5 0)
+		(layer "B.SilkS")
+		(uuid "af8bf188-0675-48cb-9c56-aade0b212192")
+		(effects
+			(font
+				(size 1.2 1.2)
 				(thickness 0.15)
 			)
 			(justify mirror)
@@ -6808,6 +6832,17 @@
 			)
 		)
 	)
+	(gr_text "Low Profile"
+		(at 181.8 129.5 0)
+		(layer "F.SilkS")
+		(uuid "1c5b10d8-9af0-457f-a792-5f52cc4e52b4")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.15)
+			)
+		)
+	)
 	(gr_text "https://github.com/Thunderbird2086/non-nemo"
 		(at 248.3 43.2 0)
 		(layer "F.SilkS")
@@ -6826,7 +6861,7 @@
 		(uuid "a4c16134-1855-4f28-8445-ec8b2cd34038")
 		(effects
 			(font
-				(face "Android Robot")
+				(face "ANDROID ROBOT")
 				(size 1.2 1.2)
 				(thickness 0.15)
 			)
@@ -7140,7 +7175,7 @@
 		(uuid "ac49db31-8de2-45c4-8949-fdcf6f37f1be")
 		(effects
 			(font
-				(face "Android Robot")
+				(face "ANDROID ROBOT")
 				(size 1.2 1.2)
 				(thickness 0.15)
 			)
@@ -7458,6 +7493,17 @@
 			(font
 				(face "KiCad Font")
 				(size 1.5 1.5)
+				(thickness 0.15)
+			)
+		)
+	)
+	(gr_text "Low Profile"
+		(at 115.5 129.5 0)
+		(layer "F.SilkS")
+		(uuid "e7c8987b-342b-4b17-b951-356030880859")
+		(effects
+			(font
+				(size 1.2 1.2)
 				(thickness 0.15)
 			)
 		)

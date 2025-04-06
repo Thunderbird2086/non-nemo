@@ -19,9 +19,9 @@
 | Rubber foot         | 8            | 8x3mm           |
 
 ## PCB
-![](../imgs/non_nemo_low_profile_pcb.png)
+![](../imgs/pcbs/low_profile.png)
 
 ## Case
 ### Plates
-![](../imgs/non_nemo_low_profile_pcb_top.png)
-![](../imgs/non_nemo_low_profile_pcb_bottom.png)
+![](../imgs/pcbs/low_profile_top.png)
+![](../imgs/pcbs/low_profile_bottom.png)

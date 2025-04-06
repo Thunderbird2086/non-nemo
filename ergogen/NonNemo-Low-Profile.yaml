@@ -337,6 +337,16 @@ pcbs:
       version_small_r:
         <<: *version_small
         where: [ mirror_matrix_ring_bottom]
+      who_am_i_l: &who_am_i_bottom_base
+        <<: *who_am_i
+        params.width: 1.2
+        params.height: 1.2
+        params.reversible: true
+        where: [cluster_layer_thumb]
+        adjust: {shift: [0, -9.5]}
+      who_am_i_r:
+        <<: *who_am_i_bottom_base
+        where: [mirror_cluster_layer_thumb]
 
   bottom:
     template: kicad8
@@ -399,13 +409,23 @@ pcbs:
       quick_desc_r:
         <<: *quick_desc
         where: [mirror_matrix_index_home]
-      who_am_i_l:
+      who_am_i_l: &who_am_i_base
         <<: *who_am_i
         where: [matrix_index_home]
         adjust: {shift: [20, -23]}
       who_am_i_r:
-        <<: *who_am_i
+        <<: *who_am_i_base
         where: [mirror_matrix_index_home]
+      who_am_i_bl: &who_am_i_back_base
+        <<: *who_am_i_bottom_base
+        params.reversible: false
+        params.mirrored: true
+        params.side: B
+        where: [cluster_layer_thumb]
+        adjust: {shift: [0, -9.5]}
+      who_am_i_br:
+        <<: *who_am_i_back_base
+        where: [mirror_cluster_layer_thumb]
 
   non_nemo:
     template: kicad8
