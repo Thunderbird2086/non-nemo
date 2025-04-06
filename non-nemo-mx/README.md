@@ -15,7 +15,7 @@
 | bottom plate       | 1            | [MX Profile](../plates/mx/) |
 | M2 screw	         | 32           | M2x5mm          |
 | M2 spacer          | 16           | M2x5mm          |
-| M2 standoff        | 10           | M2x3mm          |
+| M2 standoff        | 14           | M2x3mm          |
 | LiPo battery       | 2            | 3.7V 500mAh 303450 |
 | Rubber foot        | 8            | 8x3mm           |
 

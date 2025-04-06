@@ -234,7 +234,7 @@ text_defs:
     <<: *base_text
     params.text: 'MX Profile'
 
-breakawy_text: &breakawy_text
+breakaway_text: &breakaway_text
   kb_3x5:
     <<: *base_text
     where: [matrix_pinky_top]
@@ -319,7 +319,7 @@ pcbs:
     footprints:
       <<: *filled_zone
       <<: *mouse_bite
-      <<: *breakawy_text
+      <<: *breakaway_text
       designed_by_l: &designed_by_base
         <<: *designed_by
         where: [matrix_ring_bottom]
@@ -356,7 +356,7 @@ pcbs:
       <<: *filled_zone
       <<: *mouse_bite
       <<: *mouse_bite_v
-      <<: *breakawy_text
+      <<: *breakaway_text
 
       ON_l: &on_base
         <<: *base_text
@@ -435,7 +435,7 @@ pcbs:
       <<: *filled_zone
       <<: *mouse_bite
       <<: *mouse_bite_v
-      <<: *breakawy_text
+      <<: *breakaway_text
       hotswap:
         what: MX_HS_1u
         where: true
@@ -448,7 +448,7 @@ pcbs:
       diode:
         <<: *base_diode
         where: true 
-        adjust: {rotate: 90, shift: [7.5, 0]}
+        adjust: {shift: [7.5, 0], rotate: 90, resist: true}
       mcu_l: &mcu
         what: "xiao_nrf52840"
         where: matrix_inner_home
