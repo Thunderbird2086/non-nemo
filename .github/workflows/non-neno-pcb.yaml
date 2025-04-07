@@ -1,6 +1,8 @@
 name: Non-Nemo PCB
 
 on:
+  pull_request:
+    types: [opened, edited, reopened]
   push:
     tags:
       - '[0-9]+.[0-9]+.[0-9]+*'
