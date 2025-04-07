@@ -19,7 +19,7 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v4
 
-    - name: Generate gerber for VOID Cherry MX reversible
+    - name: Generate gerber for Non Nemo Chimera
       uses: INTI-CMNB/KiBot@v1.8.1
       with:
         config: .kibot.yaml
@@ -27,7 +27,7 @@ jobs:
         board: non-nemo-chimera/non_nemo_chimera.kicad_pcb
         schema: non-nemo-chimera/non_nemo_chimera.kicad_sch
 
-    - name: Generate gerber for VOID Chocolate reversible
+    - name: Generate gerber for Non Nemo Low profile
       uses: INTI-CMNB/KiBot@v1.8.1
       with:
         config: .kibot.yaml
@@ -35,7 +35,7 @@ jobs:
         board: non-nemo-low/non_nemo_low.kicad_pcb
         schema: non-nemo-low/non_nemo_low.kicad_sch
 
-    - name: Generate gerber for VOID Cherry MX reversible
+    - name: Generate gerber for Non Nemo MX profile
       uses: INTI-CMNB/KiBot@v1.8.1
       with:
         config: .kibot.yaml
