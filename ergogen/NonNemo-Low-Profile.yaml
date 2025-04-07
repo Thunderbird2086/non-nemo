@@ -1,6 +1,6 @@
 meta:
   author: Allen Choi
-  version: 0.1.6
+  version: 0.1.7
   engine: 4.1.0
   project: Non-Nemo Split Keyboard Low Profile
 
@@ -198,6 +198,11 @@ text_defs:
     params.width: 1
     params.height: 1
 
+  base_text_tiny: &base_text_tiny
+    <<: *base_text
+    params.width: 0.7
+    params.height: 0.7
+
   base_text_kr: &base_text_kr
     what: utility_text
     params:
@@ -211,7 +216,7 @@ text_defs:
   version_text: &version_text
     <<: *base_text_android
     params:
-      text: 'Non Nemo 0.1.6'
+      text: 'Non Nemo 0.1.7'
       mirrored: true
 
   powered_by: &powered_by_base
@@ -464,13 +469,61 @@ pcbs:
         what: SW_SPDT_PCM12
         where: [matrix_inner_home]
         adjust:
-            shift: [1.3px+12.6, -24.5]
+            shift: [1.3px+12.8, -24.5]
             rotate: 90
         params: {P1: BAT, P2: BAT_IN, side: 'B', show_3d: true, designator: "SW_SPDT"}
       power_btn_r: 
         <<: *power_btn
         where: [mirror_matrix_inner_home]
         params: {P3: BAT, P2: BAT_IN, side: 'B', show_3d: true, designator: 'SW_SPDT'}
+
+      # Reset button
+      reset_btn_l: &reset_btn
+        what: SW_smt_20_40_35
+        where: [matrix_inner_home]
+        adjust:
+            shift: [1.3px+14, -14]
+            rotate: -90
+        params: {P1: RST, P2: GND, side: 'B', show_3d: true}
+      reset_btn_r:
+        <<: *reset_btn
+        where: [mirror_matrix_inner_home]
+        params: {P1: GND, P2: RST, side: 'B', show_3d: true}
+        
+      # Pogo pins
+      pogo_tag_l: &pogo_tag
+        what: pogo_tag_1x02_p2.54mm
+        where: [matrix_inner_home]
+        adjust:
+            shift: [1.3px+10.8, -17.6]
+            rotate: 90
+        params: {P1: BAT, P2: RST, side: 'B'}
+      pogo_tag_r:
+        <<: *pogo_tag
+        where: [mirror_matrix_inner_home]
+        adjust.rotate: -90
+      text_bat_l: &text_bat
+        <<: *base_text_tiny
+        where: [matrix_inner_home]
+        adjust:
+            shift: [1.3px+12.3, -18.9]
+        params.text: 'B+'
+        params.mirrored: true
+        params.side: B
+      text_rst_l: &text_rst
+        <<: *base_text_tiny
+        where: [matrix_inner_home]
+        adjust:
+            shift: [1.3px+12.3, -17.1]
+        params.text: 'RST'
+        params.mirrored: true
+        params.side: B
+      text_bat_r:
+        <<: *text_bat
+        where: [mirror_matrix_inner_home]
+      text_rst_r:
+        <<: *text_rst
+        where: [mirror_matrix_inner_home]
 
       # Battery connector
       bat_con_l: &bat_con
