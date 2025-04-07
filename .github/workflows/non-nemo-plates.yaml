@@ -1,0 +1,90 @@
+name: Non-Nemo Plates
+
+on:
+  pull_request:
+    types: 
+      - opened
+      - synchronize
+      - reopened
+  push:
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+*'
+
+  workflow_dispatch:
+
+jobs:
+  KiBot-Generation:
+    runs-on: ubuntu-latest  # Don't change
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
+    - name: Generate gerber for Non Nemo Chimera Bottom plate
+      uses: INTI-CMNB/KiBot@v1.8.1
+      with:
+        config: .kibot.yaml
+        dir: plates/chimera/gerber/bottom
+        board: plates/chimera/bottom_chimera.kicad_pcb
+
+    - name: Generate gerber for Non Nemo Chimera Top plate
+      uses: INTI-CMNB/KiBot@v1.8.1
+      with:
+        config: .kibot.yaml
+        dir: plates/chimera/gerber/top
+        board: plates/chimera/top_chimera.kicad_pcb
+
+    - name: Generate gerber for Non Nemo Chimera Top MX plate
+      uses: INTI-CMNB/KiBot@v1.8.1
+      with:
+        config: .kibot.yaml
+        dir: plates/chimera/gerber/top_mx
+        board: plates/chimera/top_chimera_mx.kicad_pcb
+
+    - name: Generate gerber for Non Nemo Low Profile Bottom plate
+      uses: INTI-CMNB/KiBot@v1.8.1
+      with:
+        config: .kibot.yaml
+        dir: plates/low-profile/gerber/bottom
+        board: plates/low-profile/bottom_low.kicad_pcb
+
+    - name: Generate gerber for Non Nemo Chimera Top plate
+      uses: INTI-CMNB/KiBot@v1.8.1
+      with:
+        config: .kibot.yaml
+        dir: plates/low-profile/gerber/top
+        board: plates/low-profile/top_low.kicad_pcb
+
+    - name: Generate gerber for Non Nemo Low Profile Bottom plate
+      uses: INTI-CMNB/KiBot@v1.8.1
+      with:
+        config: .kibot.yaml
+        dir: plates/mx/gerber/bottom
+        board: plates/mx/bottom_mx.kicad_pcb
+
+    - name: Generate gerber for Non Nemo Chimera Top plate
+      uses: INTI-CMNB/KiBot@v1.8.1
+      with:
+        config: .kibot.yaml
+        dir: plates/mx/gerber/top
+        board: plates/mx/top_mx.kicad_pcb
+
+    - name: Zip Gerber files
+      run: |
+          zip -r --junk-paths non_nemo_chimera_bottom.zip plates/chimera/gerber/bottom
+          zip -r --junk-paths non_nemo_chimera_top.zip plates/chimera/gerber/top
+          zip -r --junk-paths non_nemo_chimera_top_mx.zip plates/chimera/gerber/top_mx
+          zip -r --junk-paths non_nemo_low-profile_bottom.zip plates/low-profile/gerber/bottom
+          zip -r --junk-paths non_nemo_low-profile_top.zip plates/low-profile/gerber/top
+          zip -r --junk-paths non_nemo_mx_bottom.zip plates/mx/gerber/bottom
+          zip -r --junk-paths non_nemo_mx_top.zip plates/mx/gerber/top
+
+    - name: GH Release
+      uses: softprops/action-gh-release@v0.1.15
+      with:
+        files: "*.zip"
+        draft: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

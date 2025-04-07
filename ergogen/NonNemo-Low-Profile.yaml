@@ -312,7 +312,7 @@ footprint_components:
       adjust: {shift: [2U+7.3, -5]}
 
 pcbs:
-  top:
+  top_low:
     template: kicad8
     outlines:
       edge: {outline: top, layer: Edge.Cuts}
@@ -348,7 +348,7 @@ pcbs:
         <<: *who_am_i_bottom_base
         where: [mirror_cluster_layer_thumb]
 
-  bottom:
+  bottom_low:
     template: kicad8
     outlines:
       edge: {outline: bottom, layer: Edge.Cuts}
@@ -427,7 +427,7 @@ pcbs:
         <<: *who_am_i_back_base
         where: [mirror_cluster_layer_thumb]
 
-  non_nemo:
+  non_nemo_low:
     template: kicad8
     outlines:
       edge: {outline: bottom, layer: Edge.Cuts}
