@@ -1,0 +1,56 @@
+name: Non-Nemo PCB
+
+on:
+  push:
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+*'
+
+  workflow_dispatch:
+
+jobs:
+  KiBot-Generation:
+    runs-on: ubuntu-latest  # Don't change
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
+    - name: Generate gerber for VOID Cherry MX reversible
+      uses: INTI-CMNB/KiBot@v1.8.1
+      with:
+        config: .kibot.yaml
+        dir: non-nemo-chimera/gerber
+        board: non-nemo-chimera/non_nemo_chimera.kicad_pcb
+        schema: non-nemo-chimera/non_nemo_chimera.kicad_sch
+
+    - name: Generate gerber for VOID Chocolate reversible
+      uses: INTI-CMNB/KiBot@v1.8.1
+      with:
+        config: .kibot.yaml
+        dir: non-nemo-low/gerber
+        board: non-nemo-low/non_nemo_low.kicad_pcb
+        schema: non-nemo-low/non_nemo_low.kicad_sch
+
+    - name: Generate gerber for VOID Cherry MX reversible
+      uses: INTI-CMNB/KiBot@v1.8.1
+      with:
+        config: .kibot.yaml
+        dir: non-nemo-mx/gerber
+        board: non-nemo-mx/non_nemo_mx.kicad_pcb
+        schema: non-nemo-mx/non_nemo_mx.kicad_sch
+
+    - name: Zip Gerber files
+      run: |
+          zip -r --junk-paths non-nemo-chimera.zip non-nemo-chimera/gerber
+          zip -r --junk-paths non-nemo-low.zip non-nemo-low/gerber
+          zip -r --junk-paths non-nemo-mx.zip non-nemo-mx/gerber
+
+    - name: GH Release
+      uses: softprops/action-gh-release@v0.1.15
+      with:
+        files: "*.zip"
+        draft: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
