@@ -1,4 +1,4 @@
-name: Non-Nemo PCB
+name: Non-Nemo Plates
 
 on:
   pull_request:
@@ -73,13 +73,13 @@ jobs:
 
     - name: Zip Gerber files
       run: |
-          zip -r --junk-paths chimera_bottom.zip plates/chimera/gerber/bottom
-          zip -r --junk-paths chimera_top.zip plates/chimera/gerber/top
-          zip -r --junk-paths chimera_top_mx.zip plates/chimera/gerber/top_mx
-          zip -r --junk-paths low-profile_bottom.zip plates/low-profile/gerber/bottom
-          zip -r --junk-paths low-profile_top.zip plates/low-profile/gerber/top
-          zip -r --junk-paths mx_bottom.zip plates/mx/gerber/bottom
-          zip -r --junk-paths mx_top.zip plates/mx/gerber/top
+          zip -r --junk-paths non_nemo_chimera_bottom.zip plates/chimera/gerber/bottom
+          zip -r --junk-paths non_nemo_chimera_top.zip plates/chimera/gerber/top
+          zip -r --junk-paths non_nemo_chimera_top_mx.zip plates/chimera/gerber/top_mx
+          zip -r --junk-paths non_nemo_low-profile_bottom.zip plates/low-profile/gerber/bottom
+          zip -r --junk-paths non_nemo_low-profile_top.zip plates/low-profile/gerber/top
+          zip -r --junk-paths non_nemo_mx_bottom.zip plates/mx/gerber/bottom
+          zip -r --junk-paths non_nemo_mx_top.zip plates/mx/gerber/top
 
     - name: GH Release
       uses: softprops/action-gh-release@v0.1.15
