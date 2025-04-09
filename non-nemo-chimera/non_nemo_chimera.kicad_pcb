@@ -8,9 +8,9 @@
 	)
 	(paper "A3")
 	(title_block
-		(title "non_nemo_mx")
-		(date "2025-04-06")
-		(rev "0.1.6")
+		(title "Non Nemo Chimera")
+		(date "2025-04-09")
+		(rev "0.2.0")
 		(company "Allen Choi")
 	)
 	(layers
