@@ -8,9 +8,9 @@
 	)
 	(paper "A3")
 	(title_block
-		(title "top_chimera")
+		(title "Non Nemo Chimera Top Plate")
 		(date "2025-04-06")
-		(rev "0.1.6")
+		(rev "0.2.0")
 		(company "Allen Choi")
 	)
 	(layers
@@ -6112,7 +6112,7 @@
 		(layer "Edge.Cuts")
 		(uuid "fd23416d-5ad9-45c8-9f71-4818588e78a9")
 	)
-	(gr_text "Non Nemo 0.1.6"
+	(gr_text "Non Nemo 0.2.0"
 		(at 259.5 109.5 0)
 		(layer "B.SilkS")
 		(uuid "19876ed8-b653-4ca0-8211-00c7bc508bf6")
@@ -6467,7 +6467,7 @@
 			(justify mirror)
 		)
 	)
-	(gr_text "Non Nemo 0.1.6"
+	(gr_text "Non Nemo 0.2.0"
 		(at 50 109.5 0)
 		(layer "B.SilkS")
 		(uuid "57c1fe5c-1741-4d47-a1a6-0c22268726f6")

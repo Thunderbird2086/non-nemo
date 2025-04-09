@@ -8,9 +8,9 @@
 	)
 	(paper "A3")
 	(title_block
-		(title "top_mx")
+		(title "Non Nemo MX Profile Tpo")
 		(date "2025-04-06")
-		(rev "0.1.6")
+		(rev "0.2.0")
 		(company "Allen Choi")
 	)
 	(layers
@@ -6112,7 +6112,7 @@
 		(layer "Edge.Cuts")
 		(uuid "ff3d144e-5eb5-493b-8a3f-d87e6806c456")
 	)
-	(gr_text "Non Nemo 0.1.6"
+	(gr_text "Non Nemo 0.2.0"
 		(at 259.5 109.5 0)
 		(layer "B.SilkS")
 		(uuid "2766d49c-cfdf-454d-9c73-1a477b28bdd8")
@@ -6493,7 +6493,7 @@
 			(justify mirror)
 		)
 	)
-	(gr_text "Non Nemo 0.1.6"
+	(gr_text "Non Nemo 0.2.0"
 		(at 50 109.5 0)
 		(layer "B.SilkS")
 		(uuid "f160fa77-ee6b-40c5-971f-1e46f4c1fc74")

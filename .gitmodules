@@ -7,3 +7,9 @@
 [submodule "non-nemo-chimera/tb2086-kicad"]
 	path = non-nemo-chimera/tb2086-kicad
 	url = git@github.com:Thunderbird2086/tb2086-kicad.git
+[submodule "plates/low-profile/tb2086-kicad"]
+	path = plates/low-profile/tb2086-kicad
+	url = git@github.com:Thunderbird2086/tb2086-kicad.git
+[submodule "plates/mx/tb2086-kicad"]
+	path = plates/mx/tb2086-kicad
+	url = git@github.com:Thunderbird2086/tb2086-kicad.git
