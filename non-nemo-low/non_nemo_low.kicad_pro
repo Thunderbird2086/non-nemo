@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 1.0,
+          "drill": 0.0,
           "height": 1.8,
-          "width": 1.8
+          "width": 3.5
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -427,7 +427,9 @@
     }
   },
   "libraries": {
-    "pinned_footprint_libs": [],
+    "pinned_footprint_libs": [
+      "TB2086_G_MISC"
+    ],
     "pinned_symbol_libs": [
       "TB2086_LED",
       "TB2086_MCU",
@@ -437,7 +439,7 @@
     ]
   },
   "meta": {
-    "filename": "non_nemo.kicad_pro",
+    "filename": "non_nemo_low.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -471,7 +473,7 @@
     "last_paths": {
       "gencad": "",
       "idf": "",
-      "netlist": "non_nemo.net",
+      "netlist": "non_nemo_low.net",
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",

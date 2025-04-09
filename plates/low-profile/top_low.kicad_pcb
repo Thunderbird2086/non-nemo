@@ -9,8 +9,8 @@
 	(paper "A4")
 	(title_block
 		(title "top")
-		(date "2025-04-06")
-		(rev "0.1.6")
+		(date "2025-04-09")
+		(rev "0.2.0")
 		(company "Allen Choi")
 	)
 	(layers
@@ -6112,7 +6112,7 @@
 		(layer "Edge.Cuts")
 		(uuid "ff908cc2-6e45-4bff-bef0-d52c083bf406")
 	)
-	(gr_text "Non Nemo 0.1.6"
+	(gr_text "Non Nemo 0.2.0"
 		(at 49 109.5 0)
 		(layer "B.SilkS")
 		(uuid "2ac217fa-5439-4eb6-a0ee-b7d69cdd8066")
@@ -6187,7 +6187,7 @@
 			(justify mirror)
 		)
 	)
-	(gr_text "Non Nemo 0.1.6"
+	(gr_text "Non Nemo 0.2.0"
 		(at 248.3 109.5 0)
 		(layer "B.SilkS")
 		(uuid "ec974e6d-913b-4f6e-978d-83bf8aa47043")
