@@ -6,11 +6,11 @@
 		(thickness 1.6)
 		(legacy_teardrops no)
 	)
-	(paper "A3")
+	(paper "A4")
 	(title_block
-		(title "top_chimera_mx")
-		(date "2025-04-06")
-		(rev "0.1.6")
+		(title "Non Nemo Chimera Top Plate - MX only")
+		(date "2025-04-09")
+		(rev "0.2.0")
 		(company "Allen Choi")
 	)
 	(layers
@@ -6064,7 +6064,7 @@
 		(layer "Edge.Cuts")
 		(uuid "fe8855fc-e4a6-446b-ad50-00a5ca3d0230")
 	)
-	(gr_text "Non Nemo 0.1.6"
+	(gr_text "Non Nemo 0.2.0"
 		(at 50 109.5 0)
 		(layer "B.SilkS")
 		(uuid "248e638f-a25e-4da9-9d14-bc5f73c41338")
@@ -6419,7 +6419,7 @@
 			(justify mirror)
 		)
 	)
-	(gr_text "Non Nemo 0.1.6"
+	(gr_text "Non Nemo 0.2.0"
 		(at 199.5 109.5 0)
 		(layer "B.SilkS")
 		(uuid "b76b8fbd-2879-4b81-a87d-5fe93f6f048f")

@@ -339,7 +339,7 @@ footprint_components:
     pogo_rst_bat: &pogo_rst_bat_base
         where: [matrix_inner_home]
         adjust:
-          shift: [1.3px+10.8, -17.6]
+          shift: [1.3px+11.6, -17.6]
           rotate: 90
         params: {P1: BAT, P2: RST, side: 'F'}
 
@@ -560,7 +560,7 @@ pcbs:
         <<: *base_text_tiny
         where: [matrix_inner_home]
         adjust:
-            shift: [1.3px+8.3, -18.8]
+            shift: [1.3px+14.3, -18.8]
         params.text: 'B+'
         params.side: B
         params.mirrored: true
@@ -568,7 +568,7 @@ pcbs:
         <<: *base_text_tiny
         where: [matrix_inner_home]
         adjust:
-            shift: [1.3px+8.3, -16.5]
+            shift: [1.3px+14.3, -16.5]
         params.text: 'RST'
         params.side: B
         params.mirrored: true
@@ -590,7 +590,7 @@ pcbs:
       <<: *mouse_bite_v
       <<: *mouse_bite_v1
       <<: *breakaway_text
-      hotswap__base: &hs_base
+      hotswap_base: &hs_base
         what: MX_HS_1u
         where:
           /matrix_*/
