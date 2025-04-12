@@ -396,17 +396,25 @@ pcbs:
         <<: *base_text
         where: [matrix_inner_home]
         adjust: {shift: [1.3px+14.3, -20.5]}
-        params: {text: "ON", side: "F", reversible: true, knockout: true}
+        params: {text: "ON", side: "F", knockout: true}
       OFF_l: &off_base
         <<: *base_text
         where: [matrix_inner_home]
-        adjust: {shift: [1.3px+14, -28.5]}
-        params: {text: "OFF", side: "F", reversible: true, knockout: true}
+        adjust: {shift: [1.3px+13.85, -28.5]}
+        params: {text: "OFF", side: "F", knockout: true}
+      update_l: &update
+        <<: *base_text
+        where: [matrix_inner_home]
+        adjust: {shift: [1.3px+12.5, -14]}
+        params: {text: "UPDATE", side: "F", knockout: true}
       ON_r:
         <<: *on_base
         where: [mirror_matrix_inner_home]
       OFF_r:
         <<: *off_base
+        where: [mirror_matrix_inner_home]
+      update_r:
+        <<: *update
         where: [mirror_matrix_inner_home]
       qr_firmware: &qr_base
         what: tb2086-non-nemo-firmware-30
