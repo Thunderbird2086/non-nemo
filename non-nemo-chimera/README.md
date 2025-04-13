@@ -27,8 +27,8 @@ Opitinal parts
 | **Component**        | **Quantity** | **Description**  |
 |---                   |---:          |---               |
 | Tactile Push Button  | 2            | SMD 2x4x3.5mm    |
-| Pogopin 1x2          | 2            | Height 5mm       |
-| Pogopin 1x2          | 4            | Height 4mm       |
+| Pogopin 1x2          | 2            | Height 5.5mm     |
+| Pogopin 1x2          | 4            | Height 4.5mm     |
 
 ## PCB
 ![](../imgs/pcbs/chimera.png)
