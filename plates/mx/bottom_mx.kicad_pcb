@@ -9289,18 +9289,6 @@
 			(justify mirror)
 		)
 	)
-	(gr_text "OFF"
-		(at 150 108.5 0)
-		(layer "B.SilkS" knockout)
-		(uuid "39cff309-d873-4ce3-be7b-80cd18e1ce02")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-			(justify mirror)
-		)
-	)
 	(gr_text "XIAO"
 		(at 139 88.8 90)
 		(layer "B.SilkS")
@@ -9309,18 +9297,6 @@
 			(font
 				(face "KiCad Font")
 				(size 0.7 0.7)
-				(thickness 0.15)
-			)
-			(justify mirror)
-		)
-	)
-	(gr_text "ON"
-		(at 150.3 100.5 0)
-		(layer "B.SilkS" knockout)
-		(uuid "443bcd0d-563f-4f7c-a34f-13c45affb366")
-		(effects
-			(font
-				(size 1 1)
 				(thickness 0.15)
 			)
 			(justify mirror)
@@ -9347,18 +9323,6 @@
 			(font
 				(face "KiCad Font")
 				(size 1.5 1.5)
-				(thickness 0.15)
-			)
-			(justify mirror)
-		)
-	)
-	(gr_text "OFF"
-		(at 159.5 108.5 0)
-		(layer "B.SilkS" knockout)
-		(uuid "5a8caf55-2546-4d6a-a86b-6d135b012172")
-		(effects
-			(font
-				(size 1 1)
 				(thickness 0.15)
 			)
 			(justify mirror)
@@ -9398,18 +9362,6 @@
 			(font
 				(face "KiCad Font")
 				(size 0.7 0.7)
-				(thickness 0.15)
-			)
-			(justify mirror)
-		)
-	)
-	(gr_text "ON"
-		(at 159.2 100.5 0)
-		(layer "B.SilkS" knockout)
-		(uuid "a81359b9-1d4e-4c35-9683-8e50b523bfe8")
-		(effects
-			(font
-				(size 1 1)
 				(thickness 0.15)
 			)
 			(justify mirror)
@@ -10157,7 +10109,7 @@
 		)
 	)
 	(gr_text "OFF"
-		(at 159.5 108.5 0)
+		(at 159.65 108.5 0)
 		(layer "F.SilkS" knockout)
 		(uuid "895c2ce2-bf83-4e63-906d-86294437b9d1")
 		(effects
@@ -10615,9 +10567,31 @@
 		)
 	)
 	(gr_text "OFF"
-		(at 150 108.5 0)
+		(at 149.85 108.5 0)
 		(layer "F.SilkS" knockout)
 		(uuid "9f58ec28-9e92-44b9-8029-fa587b3037ca")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(gr_text "UPDATE"
+		(at 161 94 0)
+		(layer "F.SilkS" knockout)
+		(uuid "a3421148-03c7-47f4-bf76-b80d96aacdb0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(gr_text "UPDATE"
+		(at 148.5 94 0)
+		(layer "F.SilkS" knockout)
+		(uuid "da7a31d3-82eb-40f8-9b01-5bd6cc5cf352")
 		(effects
 			(font
 				(size 1 1)

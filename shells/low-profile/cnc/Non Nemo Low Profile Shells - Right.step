@@ -9,8 +9,8 @@ FILE_DESCRIPTION(
 /* implementation_level */ '2;1');
 
 FILE_NAME(
-/* name */ 'Non Nemo Low Profile - Right.step',
-/* time_stamp */ '2025-04-13T18:58:44+08:00',
+/* name */ 'Non Nemo Low Profile Shells - Right.step',
+/* time_stamp */ '2025-04-14T01:08:16+08:00',
 /* author */ (''),
 /* organization */ (''),
 /* preprocessor_version */ 'ST-DEVELOPER v20.1',
@@ -25,7 +25,7 @@ DATA;
 #11=SHAPE_REPRESENTATION_RELATIONSHIP('SRR','None',#28221,#12);
 #12=ADVANCED_BREP_SHAPE_REPRESENTATION('',(#14),#28214);
 #13=STYLED_ITEM('',(#28231),#14);
-#14=MANIFOLD_SOLID_BREP('Left (1)',#16612);
+#14=MANIFOLD_SOLID_BREP('Rithg Hand',#16612);
 #15=ELLIPSE('',#18010,3.81837661840736,2.7);
 #16=ELLIPSE('',#18012,3.81837661840736,2.7);
 #17=(
@@ -28747,15 +28747,18 @@ SOLID_ANGLE_UNIT()
 #28220=PRODUCT_DEFINITION_SHAPE('',$,#28223);
 #28221=SHAPE_REPRESENTATION('',(#16613),#28214);
 #28222=PRODUCT_DEFINITION_CONTEXT('part definition',#28227,'design');
-#28223=PRODUCT_DEFINITION('Untitled','Untitled v2',#28224,#28222);
+#28223=PRODUCT_DEFINITION('Non Nemo Low Profile Shells',
+'Non Nemo Low Profile Shells v3',#28224,#28222);
 #28224=PRODUCT_DEFINITION_FORMATION('',$,#28229);
-#28225=PRODUCT_RELATED_PRODUCT_CATEGORY('Untitled v2','Untitled v2',(#28229));
+#28225=PRODUCT_RELATED_PRODUCT_CATEGORY(
+'Non Nemo Low Profile Shells v3','Non Nemo Low Profile Shells v3',(#28229));
 #28226=APPLICATION_PROTOCOL_DEFINITION('international standard',
 'automotive_design',2009,#28227);
 #28227=APPLICATION_CONTEXT(
 'Core Data for Automotive Mechanical Design Process');
 #28228=PRODUCT_CONTEXT('part definition',#28227,'mechanical');
-#28229=PRODUCT('Untitled','Untitled v2',$,(#28228));
+#28229=PRODUCT('Non Nemo Low Profile Shells',
+'Non Nemo Low Profile Shells v3',$,(#28228));
 #28230=PRESENTATION_STYLE_ASSIGNMENT((#28232));
 #28231=PRESENTATION_STYLE_ASSIGNMENT((#28233));
 #28232=SURFACE_STYLE_USAGE(.BOTH.,#28234);

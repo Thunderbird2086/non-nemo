@@ -10,7 +10,7 @@ FILE_DESCRIPTION(
 
 FILE_NAME(
 /* name */ 'Non Nemo Chimera Shell - Right.step',
-/* time_stamp */ '2025-04-13T19:10:02+08:00',
+/* time_stamp */ '2025-04-14T01:00:12+08:00',
 /* author */ (''),
 /* organization */ (''),
 /* preprocessor_version */ 'ST-DEVELOPER v20.1',
@@ -29678,16 +29678,16 @@ SOLID_ANGLE_UNIT()
 #29024=SHAPE_REPRESENTATION('',(#17064),#29017);
 #29025=PRODUCT_DEFINITION_CONTEXT('part definition',#29030,'design');
 #29026=PRODUCT_DEFINITION('Non Nemo Chimera Shell',
-'Non Nemo Chimera Shell v34',#29027,#29025);
+'Non Nemo Chimera Shell v43',#29027,#29025);
 #29027=PRODUCT_DEFINITION_FORMATION('',$,#29032);
-#29028=PRODUCT_RELATED_PRODUCT_CATEGORY('Non Nemo Chimera Shell v34',
-'Non Nemo Chimera Shell v34',(#29032));
+#29028=PRODUCT_RELATED_PRODUCT_CATEGORY('Non Nemo Chimera Shell v43',
+'Non Nemo Chimera Shell v43',(#29032));
 #29029=APPLICATION_PROTOCOL_DEFINITION('international standard',
 'automotive_design',2009,#29030);
 #29030=APPLICATION_CONTEXT(
 'Core Data for Automotive Mechanical Design Process');
 #29031=PRODUCT_CONTEXT('part definition',#29030,'mechanical');
-#29032=PRODUCT('Non Nemo Chimera Shell','Non Nemo Chimera Shell v34',$,
+#29032=PRODUCT('Non Nemo Chimera Shell','Non Nemo Chimera Shell v43',$,
 (#29031));
 #29033=PRESENTATION_STYLE_ASSIGNMENT((#29034));
 #29034=SURFACE_STYLE_USAGE(.BOTH.,#29035);
