@@ -342,12 +342,13 @@
 					)
 				)
 			)
-			(property "Value" "D"
+			(property "Value" "1N4148W"
 				(at 0 -2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+				    (hide yes)
 				)
 			)
 			(property "Footprint" ""
@@ -5348,12 +5349,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 136.652 55.372 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -5433,12 +5435,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 329.438 170.688 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -5518,12 +5521,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 293.878 170.688 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -5603,12 +5607,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 118.872 76.454 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -5826,12 +5831,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 329.438 210.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -5980,12 +5986,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 118.872 55.372 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -6065,12 +6072,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 364.998 230.632 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -6150,12 +6158,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 118.872 95.504 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -6766,12 +6775,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 347.218 170.688 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -6981,12 +6991,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 364.998 170.688 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -7200,12 +7211,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 172.212 55.372 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -7285,12 +7297,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 154.432 95.504 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -7441,12 +7454,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 311.658 210.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -7526,12 +7540,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 136.652 95.504 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -7952,12 +7967,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 101.092 55.372 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -8249,12 +8265,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 172.212 115.316 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -9020,12 +9037,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 347.218 191.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -9105,12 +9123,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 154.432 55.372 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -9670,12 +9689,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 329.438 230.632 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -9755,12 +9775,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 364.998 191.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -10176,12 +10197,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 154.432 76.454 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -10261,12 +10283,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 154.432 115.316 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -10549,12 +10572,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 136.652 76.454 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -10634,12 +10658,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 172.212 76.454 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -10926,12 +10951,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 364.998 210.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -11144,12 +11170,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 172.212 95.504 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -11298,12 +11325,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 101.092 76.454 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -11383,12 +11411,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 293.878 210.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -11537,12 +11566,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 347.218 210.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -11686,12 +11716,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 136.652 115.316 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -11974,12 +12005,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 329.438 191.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -12059,12 +12091,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 347.218 230.632 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -12209,12 +12242,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 311.658 170.688 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -12294,12 +12328,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 293.878 191.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -12517,12 +12552,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 311.658 191.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"
@@ -12602,12 +12638,13 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 101.092 95.504 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TB2086_SMD:D3_SMD"

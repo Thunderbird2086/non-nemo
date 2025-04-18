@@ -157,7 +157,7 @@
 	(net 78 "RST_r")
 	(net 79 "RST")
 	(footprint "TB2086_SMD:SW_SPDT_PCM12"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "0064a025-52be-4a9c-94c6-b5733d8738cd")
 		(at 149.6 104.5 90)
 		(descr "Ultraminiature Surface Mount Slide Switch, right-angle, https://www.ckswitches.com/media/1424/pcm.pdf")
@@ -488,7 +488,7 @@
 		)
 	)
 	(footprint "mousebites_5p5mm_easysnap"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "05ab9645-96ca-4375-9427-052a3ba5dcb1")
 		(at 157.5 120)
 		(descr "Mousebites designed to break easier on one side than the other, with hole to apply leverage")
@@ -901,8 +901,8 @@
 			(uuid "bd4fa86e-3e6a-4400-acd2-f93603382e30")
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "06265664-f12b-44a1-86ce-1c823908ba82")
 		(at 57.5 100 90)
 		(descr "Resitance 3 pas")
@@ -919,9 +919,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "f0b2ac7c-dde2-4ffe-8e3d-45bc94fd60a1")
 			(effects
 				(font
@@ -1148,7 +1149,7 @@
 		)
 	)
 	(footprint "TB2086_MISC:Molex_Pico-EZmate_78171-0002_1x02-1MP_P1.20mm_HandSolder"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "07294f0e-a3cd-412b-9291-9fa3e1a21570")
 		(at 136 104.5 -90)
 		(descr "Molex Pico-EZmate series connector, 78171-0002 (http://www.molex.com/pdm_docs/sd/781710002_sd.pdf), generated with kicad-footprint-generator")
@@ -1622,8 +1623,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "08a786b3-43fe-4c6e-b976-2b7808c399e6")
 		(at 97.5 80 90)
 		(descr "Resitance 3 pas")
@@ -1640,9 +1641,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "30008857-278f-463b-a9b3-46a3f9555c25")
 			(effects
 				(font
@@ -1869,7 +1871,7 @@
 		)
 	)
 	(footprint "mousebites_5p5mm_easysnap"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "099375c8-d02c-4f7f-b829-34ae23acc583")
 		(at 100 139.5 -90)
 		(descr "Mousebites designed to break easier on one side than the other, with hole to apply leverage")
@@ -2282,8 +2284,8 @@
 			(uuid "5166871a-40f0-4108-a153-db3bfbceb588")
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "0ef3dbca-fadc-428d-91ff-22aa88dcf2c8")
 		(at 287 60 90)
 		(descr "Resitance 3 pas")
@@ -2300,9 +2302,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "6de5275d-f455-4e28-8070-552e83dc31f7")
 			(effects
 				(font
@@ -2529,7 +2532,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "1132fad7-2cfc-493d-a0ae-4d7b5f225e2b")
 		(at 219.5 60)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -3191,8 +3194,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "114731a3-3d2e-437b-89ae-b58f185e227f")
 		(at 37.5 100 90)
 		(descr "Resitance 3 pas")
@@ -3209,9 +3212,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "a569111c-bb21-41f5-92dd-78b95a632630")
 			(effects
 				(font
@@ -3437,8 +3441,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "15ed7632-0e89-4c42-ac09-b854eb623173")
 		(at 117.5 60 90)
 		(descr "Resitance 3 pas")
@@ -3455,9 +3459,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "0b4c5a17-c4fa-4116-93d1-53b02e27771c")
 			(effects
 				(font
@@ -3684,7 +3689,7 @@
 		)
 	)
 	(footprint "mousebites_5p5mm_easysnap"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "1bd307e0-0205-4c3e-a2b9-c81068bac8fe")
 		(at 279.5 42.5 90)
 		(descr "Mousebites designed to break easier on one side than the other, with hole to apply leverage")
@@ -4097,8 +4102,8 @@
 			(uuid "ab51bea6-4ef0-4749-b2e3-5829fe4ce797")
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "22f67566-d741-4406-99fa-8f6658311afd")
 		(at 37.5 60 90)
 		(descr "Resitance 3 pas")
@@ -4115,9 +4120,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "8d19eef2-84ea-4802-b05b-11b241fc087a")
 			(effects
 				(font
@@ -4344,7 +4350,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "2385d3a5-d427-4f55-93ec-ad0da70fd32c")
 		(at 110 60)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -5007,7 +5013,7 @@
 		)
 	)
 	(footprint "mousebites_5p5mm_easysnap"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "25fef06e-0d12-4391-8483-79fc6799119e")
 		(at 209.5 139.5 -90)
 		(descr "Mousebites designed to break easier on one side than the other, with hole to apply leverage")
@@ -5420,8 +5426,8 @@
 			(uuid "d1eab74b-15f6-4b78-8f80-4beee19aeeda")
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "28b96960-5244-400d-bda1-7fcb9e83dd29")
 		(at 97.5 60 90)
 		(descr "Resitance 3 pas")
@@ -5438,9 +5444,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "c8c46542-9a25-4f5b-8a6a-a4188d4831c6")
 			(effects
 				(font
@@ -5667,7 +5674,7 @@
 		)
 	)
 	(footprint "mousebites_5p5mm_easysnap"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "2bcf8e8b-5773-4993-9a28-908f68d4944b")
 		(at 157.5 85)
 		(descr "Mousebites designed to break easier on one side than the other, with hole to apply leverage")
@@ -6081,7 +6088,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "2f94c493-b7fe-4299-961d-a0566d7deff2")
 		(at 259.5 100)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -6744,7 +6751,7 @@
 		)
 	)
 	(footprint "mousebites_5p5mm_easysnap"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "2fa0f1a9-6b43-4c22-8087-8e4293ebe4a6")
 		(at 199.5 42.5 90)
 		(descr "Mousebites designed to break easier on one side than the other, with hole to apply leverage")
@@ -7157,8 +7164,8 @@
 			(uuid "2aed2034-c8ce-4193-ad21-d6557bdc989f")
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "321aa77b-8bbf-4c10-a901-46c658300099")
 		(at 92.5 119 -90)
 		(descr "Resitance 3 pas")
@@ -7175,9 +7182,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 -90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "4bde9122-0487-46fd-9759-41ccbe29356d")
 			(effects
 				(font
@@ -7403,8 +7411,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "34eb0f43-712b-4d74-b13c-a22c4d427299")
 		(at 247 60 90)
 		(descr "Resitance 3 pas")
@@ -7421,9 +7429,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "f777a30a-b66d-414d-a531-1038bf0cd1be")
 			(effects
 				(font
@@ -7649,8 +7658,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "3795de40-764f-440c-9ead-69abf88b551b")
 		(at 132.5 119 -90)
 		(descr "Resitance 3 pas")
@@ -7667,9 +7676,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 -90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "db8a1b2e-1ebb-4502-8f08-a70d0483a7bb")
 			(effects
 				(font
@@ -7896,7 +7906,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "3bdf6341-62c3-4ca7-9b58-47bd30cef778")
 		(at 50 80)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -8559,7 +8569,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "3c4680db-5b1c-49b6-8339-ed640a4e6244")
 		(at 199.5 80)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -9222,7 +9232,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "3f27ee2a-f307-465f-9abe-abdf9be95323")
 		(at 239.5 80)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -9884,8 +9894,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "40d031b3-85a5-4aa2-b9a6-b35f10a55009")
 		(at 162 119 -90)
 		(descr "Resitance 3 pas")
@@ -9902,9 +9912,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 -90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "cfd8e338-2f17-477e-bbb8-f23e29ffc4a3")
 			(effects
 				(font
@@ -10130,8 +10141,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "44f52117-fa35-459f-bbff-51e8c4d44ebf")
 		(at 112.5 119 -90)
 		(descr "Resitance 3 pas")
@@ -10148,9 +10159,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 -90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "f50397e8-4c87-4edb-8aac-deb710d9de8a")
 			(effects
 				(font
@@ -10376,8 +10388,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "45aace24-5620-4a0a-9652-7309260b07e1")
 		(at 267 60 90)
 		(descr "Resitance 3 pas")
@@ -10394,9 +10406,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "fa1847a6-bed1-4b3e-803c-9497cc198363")
 			(effects
 				(font
@@ -10623,7 +10636,7 @@
 		)
 	)
 	(footprint "mousebites_5p5mm_easysnap"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "47b95165-a179-4321-b887-e010b58095da")
 		(at 110 42.5 90)
 		(descr "Mousebites designed to break easier on one side than the other, with hole to apply leverage")
@@ -11037,7 +11050,7 @@
 		)
 	)
 	(footprint "mousebites_5p5mm_easysnap"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "47d514fa-106d-4429-97be-704ce67d2929")
 		(at 169.5 139.5 -90)
 		(descr "Mousebites designed to break easier on one side than the other, with hole to apply leverage")
@@ -11450,8 +11463,8 @@
 			(uuid "b8434653-28a2-4011-8d15-62e83afadd84")
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "4ac95238-5091-4a4f-83e8-beac40b2b432")
 		(at 227 80 90)
 		(descr "Resitance 3 pas")
@@ -11468,9 +11481,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "74e61e42-161e-4acf-a10d-b2a254108751")
 			(effects
 				(font
@@ -11697,7 +11711,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "4be63f74-eea8-4872-9acf-f1b0b049d951")
 		(at 70 60)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -12359,8 +12373,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "4d147a4e-5aa1-4a49-bab0-dd8beb650c81")
 		(at 247 80 90)
 		(descr "Resitance 3 pas")
@@ -12377,9 +12391,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "0aaf780d-dfd5-420e-84b6-1572f5a046fe")
 			(effects
 				(font
@@ -12605,8 +12620,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "4d311d1b-2667-4b96-b45c-01f0a8b257a5")
 		(at 227 60 90)
 		(descr "Resitance 3 pas")
@@ -12623,9 +12638,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "f6cf5656-7467-4ad7-9bb0-ac57a9da0e26")
 			(effects
 				(font
@@ -12852,7 +12868,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "5362e605-43f2-4f93-968d-ca9a413e973b")
 		(at 110 80)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -13515,7 +13531,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "5700f081-81d7-4757-ac57-9e037f150262")
 		(at 70 100)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -14178,7 +14194,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "57973182-f85f-4f3b-8cda-3bb58004233e")
 		(at 259.5 80)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -14841,7 +14857,7 @@
 		)
 	)
 	(footprint "TB2086_MCU:Xiao_nRF52840_edgecut"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "5fb5181b-75c3-4815-a69f-7e8086c07fbe")
 		(at 173.5 85.41)
 		(descr "Footprint for Seeduino Xiao nRF52840 controllers, through hole and castellated pads")
@@ -15380,8 +15396,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "5fed7144-01ac-4316-bd9a-572b6dc528c6")
 		(at 202 119 -90)
 		(descr "Resitance 3 pas")
@@ -15398,9 +15414,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 -90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "ef7e1eba-8698-4edf-bdfc-52d40091a076")
 			(effects
 				(font
@@ -15627,7 +15644,7 @@
 		)
 	)
 	(footprint "mousebites_5p5mm_easysnap"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "65b03afa-b135-4d0a-a558-37ffe09afa59")
 		(at 140 139.5 -90)
 		(descr "Mousebites designed to break easier on one side than the other, with hole to apply leverage")
@@ -16041,7 +16058,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_choc_v1_v2_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "66888788-0c94-425f-8ec8-de9a7966505e")
 		(at 209.5 122)
 		(descr "Hotswap footprint for Kailh Choc v2 style switches")
@@ -16767,7 +16784,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "6966e9ef-917e-45d8-ac51-fbeb8ab75108")
 		(at 259.5 60)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -17430,7 +17447,7 @@
 		)
 	)
 	(footprint "TB2086_SMD:SW_SPDT_PCM12"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "69690b73-bebc-4b5d-974c-aeb43966f0fa")
 		(at 159.9 104.5 -90)
 		(descr "Ultraminiature Surface Mount Slide Switch, right-angle, https://www.ckswitches.com/media/1424/pcm.pdf")
@@ -17761,7 +17778,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "77013573-ae25-4bbc-bf38-12a20037925a")
 		(at 90 60)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -18424,7 +18441,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "78e9487a-d9d7-4a31-aa1a-ed25711afd4c")
 		(at 30 100)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -19087,7 +19104,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "7bbe8a36-ab59-44f9-9bcd-054ee4a7a8b1")
 		(at 30 80)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -19750,7 +19767,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "7f2f6b62-a552-4706-bae4-f079f542da7c")
 		(at 199.5 100)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -20413,7 +20430,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "80a86263-f2f3-4542-a28f-66cca184a9e0")
 		(at 70 80)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -21076,7 +21093,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_choc_v1_v2_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "822f217c-7cfd-4081-b4dd-451aaa07621a")
 		(at 120 122)
 		(descr "Hotswap footprint for Kailh Choc v2 style switches")
@@ -21801,8 +21818,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "853fc6b7-3836-43b1-8848-2b3a0f9abafe")
 		(at 117.5 100 90)
 		(descr "Resitance 3 pas")
@@ -21819,9 +21836,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "7f1f5237-698e-4778-9e98-2019808b47a4")
 			(effects
 				(font
@@ -22048,7 +22066,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "85aabc51-6a75-437a-a712-5cb7299f28bf")
 		(at 219.5 80)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -22711,7 +22729,7 @@
 		)
 	)
 	(footprint "TB2086_MISC:Tag_Pogopin_1x02_P2.54mm"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "8afc38da-4517-49e9-8dfc-d632221826b2")
 		(at 161.9 97.6 90)
 		(property "Reference" "J2"
@@ -22814,8 +22832,8 @@
 			(uuid "a415f3d6-c680-4692-854d-e92fc2203ef0")
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "8b25d14e-15e2-473e-a650-d00d05ca77f1")
 		(at 57.5 60 90)
 		(descr "Resitance 3 pas")
@@ -22832,9 +22850,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "cf43b21f-8830-49ed-ac7d-47cf6ddb8ce5")
 			(effects
 				(font
@@ -23061,7 +23080,7 @@
 		)
 	)
 	(footprint "TB2086_MISC:Molex_Pico-EZmate_78171-0002_1x02-1MP_P1.20mm_HandSolder"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "9050209f-6bf3-4c18-9c7f-8a0dec39dba4")
 		(at 173.5 104.5 90)
 		(descr "Molex Pico-EZmate series connector, 78171-0002 (http://www.molex.com/pdm_docs/sd/781710002_sd.pdf), generated with kicad-footprint-generator")
@@ -23535,8 +23554,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "91be52c5-91b0-4b90-a34e-4092f1f35b9e")
 		(at 267 100 90)
 		(descr "Resitance 3 pas")
@@ -23553,9 +23572,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "d7032236-26b2-49da-81f8-127df7e3e2c5")
 			(effects
 				(font
@@ -23782,7 +23802,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "93daab18-f455-4ceb-bf38-e5c42ff16d19")
 		(at 279.5 100)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -24445,7 +24465,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_choc_v1_v2_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "95192ad7-0003-448e-b346-725971ab0254")
 		(at 100 122)
 		(descr "Hotswap footprint for Kailh Choc v2 style switches")
@@ -25170,8 +25190,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "984fcf7f-80ac-4429-9b12-267ecdb46b94")
 		(at 77.5 80 90)
 		(descr "Resitance 3 pas")
@@ -25188,9 +25208,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "b0aa9c75-7731-440f-9f8e-f5128c7755de")
 			(effects
 				(font
@@ -25417,7 +25438,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "a120f921-adbb-43fe-b52c-cfa445c2ee5a")
 		(at 50 60)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -26080,7 +26101,7 @@
 		)
 	)
 	(footprint "mousebites_5p5mm_easysnap"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "a1c313a8-e347-42dc-9a9f-1c25bb8af893")
 		(at 30 42.5 90)
 		(descr "Mousebites designed to break easier on one side than the other, with hole to apply leverage")
@@ -26494,7 +26515,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "a5da8469-010b-4ec0-8dde-2a6c97305560")
 		(at 279.5 60)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -27157,7 +27178,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "a7874dd2-c947-4601-8fa9-d6db316f410f")
 		(at 30 60)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -27820,7 +27841,7 @@
 		)
 	)
 	(footprint "undefined"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "b3f71738-4eb0-4a9d-9d49-0899669e2f70")
 		(at 142 99.5)
 		(descr "Open Source Hardware Logo")
@@ -28375,7 +28396,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "b60626c9-5fd0-44eb-8bbb-9d50f49e51bb")
 		(at 239.5 100)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -29037,8 +29058,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "bb29038b-c43d-4884-8396-3c5c3cb17b54")
 		(at 207 80 90)
 		(descr "Resitance 3 pas")
@@ -29055,9 +29076,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "6ba2fe7f-fd0d-4bbf-8809-b12e507ba43a")
 			(effects
 				(font
@@ -29283,8 +29305,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "bd1656ba-6103-49bc-9cb2-350ce86c1a4e")
 		(at 77.5 60 90)
 		(descr "Resitance 3 pas")
@@ -29301,9 +29323,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "528c3965-599d-4e0c-94e5-4418f626c6ed")
 			(effects
 				(font
@@ -29530,7 +29553,7 @@
 		)
 	)
 	(footprint "TB2086_MISC:Tag_Pogopin_1x02_P2.54mm"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "bda72c56-f4fc-497d-8700-57e1cffeccbd")
 		(at 147.6 97.6 90)
 		(property "Reference" "J1"
@@ -29634,7 +29657,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "bed39b03-9c8e-416d-a733-e0a772c0a09e")
 		(at 110 100)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -30297,7 +30320,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "bef1143e-013e-46bb-a41a-86738381ce7b")
 		(at 90 80)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -30960,7 +30983,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_choc_v1_v2_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "bf5a51ad-1a86-452c-b75e-c82652753656")
 		(at 169.5 122)
 		(descr "Hotswap footprint for Kailh Choc v2 style switches")
@@ -31686,7 +31709,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "bf5aa1e1-839a-4d80-8361-abc49e6d3c26")
 		(at 279.5 80)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -32349,7 +32372,7 @@
 		)
 	)
 	(footprint "TB2086_MCU:Xiao_nRF52840_edgecut"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "c4a4372e-f46d-4cf0-80fa-a7f41f615bad")
 		(at 136 85.41)
 		(descr "Footprint for Seeduino Xiao nRF52840 controllers, through hole and castellated pads")
@@ -32889,7 +32912,7 @@
 		)
 	)
 	(footprint "TB2086_SMD:SMT 2X4X3.5MM Tactile Tact Push Button"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "ca9e1440-6d50-46c3-989b-c7776a720d9a")
 		(at 158.7 94 90)
 		(property "Reference" "RSW2"
@@ -33070,7 +33093,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "cbdab103-fac6-40dd-977e-4b8420e4afca")
 		(at 239.5 60)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -33732,8 +33755,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "d7b71ed5-8c4d-4ac4-b62e-702721caa680")
 		(at 227 100 90)
 		(descr "Resitance 3 pas")
@@ -33750,9 +33773,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "ab0bd391-5f31-4704-a602-0bd0fb5f5e4e")
 			(effects
 				(font
@@ -33978,8 +34002,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "dc59a5ec-dd2a-4d7e-bde3-cec304788d96")
 		(at 97.5 100 90)
 		(descr "Resitance 3 pas")
@@ -33996,9 +34020,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "1a3f8227-2093-452c-bd9d-aedd877c6607")
 			(effects
 				(font
@@ -34224,8 +34249,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "de49ebc9-2871-4409-bb32-e116d3c5d6d7")
 		(at 117.5 80 90)
 		(descr "Resitance 3 pas")
@@ -34242,9 +34267,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "4935c473-954b-4767-965a-d1b0a97a10ba")
 			(effects
 				(font
@@ -34470,8 +34496,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "debf677e-0b9f-4f16-bd1c-9ed62b255c32")
 		(at 287 80 90)
 		(descr "Resitance 3 pas")
@@ -34488,9 +34514,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "03879c2f-2bf2-4050-bf8f-25512597f885")
 			(effects
 				(font
@@ -34716,8 +34743,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "e01c9289-642c-43f8-8822-e9f89db6094b")
 		(at 287 100 90)
 		(descr "Resitance 3 pas")
@@ -34734,9 +34761,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "e3ddca60-99b9-4541-acfd-713b72e877f8")
 			(effects
 				(font
@@ -34963,7 +34991,7 @@
 		)
 	)
 	(footprint "undefined"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "e27bb284-d01f-45df-b841-c65589dc2e8b")
 		(at 167.5 99.5)
 		(descr "Open Source Hardware Logo")
@@ -35517,8 +35545,8 @@
 			(uuid "e273922f-b93a-49b4-80c5-f52e27092d9e")
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "e6211c06-6ed8-4795-a37d-679211e4a6e5")
 		(at 247 100 90)
 		(descr "Resitance 3 pas")
@@ -35535,9 +35563,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "dae2c2fa-c991-4d02-a5e6-fbf8c0056718")
 			(effects
 				(font
@@ -35763,8 +35792,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "e6839f62-b269-4699-bbb7-e6d405e8dcb5")
 		(at 37.5 80 90)
 		(descr "Resitance 3 pas")
@@ -35781,9 +35810,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "3e0c41c8-e051-4204-8adf-1ac2fd6e6629")
 			(effects
 				(font
@@ -36009,8 +36039,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "e6bbfb41-d1aa-4703-8065-1959eaf6315a")
 		(at 77.5 100 90)
 		(descr "Resitance 3 pas")
@@ -36027,9 +36057,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "7372a2bd-92aa-46c6-8a35-f61a951d0432")
 			(effects
 				(font
@@ -36256,7 +36287,7 @@
 		)
 	)
 	(footprint "TB2086_SMD:SMT 2X4X3.5MM Tactile Tact Push Button"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "e6eb9cbf-1645-491c-8a07-f9960333deb5")
 		(at 150.8 94 -90)
 		(property "Reference" "RSW1"
@@ -36436,8 +36467,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "e7b97f11-9926-4cd5-80de-603b63b0b0d8")
 		(at 207 100 90)
 		(descr "Resitance 3 pas")
@@ -36454,9 +36485,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "71ecd488-4a94-4e47-bb7f-307cb999ec04")
 			(effects
 				(font
@@ -36682,8 +36714,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "eaad2261-8af0-4500-8e41-4f3ee8bcbea5")
 		(at 182 119 -90)
 		(descr "Resitance 3 pas")
@@ -36700,9 +36732,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 -90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "c6371695-133c-4cee-8cd1-2c1a007c26c0")
 			(effects
 				(font
@@ -36928,8 +36961,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "ec6398a8-6be8-42e8-95ce-b1b211a0df6c")
 		(at 57.5 80 90)
 		(descr "Resitance 3 pas")
@@ -36946,9 +36979,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "73bb7e90-a0bb-4147-9dfb-9da00723145c")
 			(effects
 				(font
@@ -37175,7 +37209,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "f3e04a65-2af4-471f-8b0c-e4b0b5af14cb")
 		(at 199.5 60)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -37837,8 +37871,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "f407c4f5-8e92-454f-95e4-23bbdff44e3b")
 		(at 207 60 90)
 		(descr "Resitance 3 pas")
@@ -37855,9 +37889,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "a36e8388-f77a-43ca-a240-530ba785111d")
 			(effects
 				(font
@@ -38084,7 +38119,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "f57c1ebf-a451-4c4c-b94b-1e0af77adb48")
 		(at 90 100)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -38747,7 +38782,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_choc_v1_v2_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "f664c798-26ed-4c33-9423-89b158a64ab2")
 		(at 140 122)
 		(descr "Hotswap footprint for Kailh Choc v2 style switches")
@@ -39473,7 +39508,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_choc_v1_v2_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "fb396f2f-1b02-456b-bec9-8bde49d33296")
 		(at 189.5 122)
 		(descr "Hotswap footprint for Kailh Choc v2 style switches")
@@ -40199,7 +40234,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "fbfe9825-a188-4146-ada9-029bf6884221")
 		(at 50 100)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -40862,7 +40897,7 @@
 		)
 	)
 	(footprint "TB2086_KEYSWITCH:SW_MX_HS_1u"
-		(layer "F.Cu")
+		(layer "B.Cu")
 		(uuid "fd42bbc2-9e77-4dbd-a8e4-da0b14c32422")
 		(at 219.5 100)
 		(descr "Footprint for Cherry MX style switches with Kailh hotswap socket")
@@ -41524,8 +41559,8 @@
 			)
 		)
 	)
-	(footprint "TB2086_SMD:TB2086_SMD_D3_SMD"
-		(layer "F.Cu")
+	(footprint "TB2086_SMD:D3_SMD"
+		(layer "B.Cu")
 		(uuid "fff44e7b-d47f-4d8d-bb20-c3a31c2075ad")
 		(at 267 80 90)
 		(descr "Resitance 3 pas")
@@ -41542,9 +41577,10 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "1N4148W"
 			(at 0 0 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "3b274618-e317-404a-a420-22410fcd9e31")
 			(effects
 				(font
