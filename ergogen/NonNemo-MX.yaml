@@ -96,13 +96,13 @@ outlines:
   top_raw: &top_raw
     - <<: *raw
 
-  braekaway_top:
+  breakaway_top:
     - <<: *rect_base
       where: [matrix_pinky_top]
       adjust: {shift:[6px+4.6, 10.8+5.5+2.5+1.2]}
       size: [13.5px+3.6, 5]
       fillet: corner
-  braekaway_bottom:
+  breakaway_bottom:
     - <<: *rect_base
       where: [cluster_esc_thumb]
       adjust: {shift:[52.15+2.783, -10.8-5.5-2.5-1.2]}
@@ -197,16 +197,16 @@ outlines:
     
   top:
     - "outline"
-    - "braekaway_top"
-    - "braekaway_bottom"
+    - "breakaway_top"
+    - "breakaway_bottom"
     - "-keys"
 
   pcb:
     - "pcb_outline"
     - "-screw_holes_left"
     - "-screw_holes_right"
-    - "braekaway_top"
-    - "braekaway_bottom"
+    - "breakaway_top"
+    - "breakaway_bottom"
 
   bottom:
     - "pcb"

@@ -13,3 +13,6 @@
 [submodule "plates/mx/tb2086-kicad"]
 	path = plates/mx/tb2086-kicad
 	url = git@github.com:Thunderbird2086/tb2086-kicad.git
+[submodule "wired/non-nemo-chimera/tb2086-kicad"]
+	path = wired/non-nemo-chimera/tb2086-kicad
+	url = git@github.com:Thunderbird2086/tb2086-kicad.git
