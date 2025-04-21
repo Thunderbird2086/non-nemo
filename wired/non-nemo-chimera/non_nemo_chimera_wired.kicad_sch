@@ -5,8 +5,8 @@
 	(uuid "58525c65-b8f4-4370-af5a-27fad6317d7f")
 	(paper "A3")
 	(title_block
-		(title "Non Nemo Chimera")
-		(date "2025-04-09")
+		(title "Non Nemo Chimera Wired")
+		(date "2025-04-21")
 		(rev "0.2.0")
 	)
 	(lib_symbols
