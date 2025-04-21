@@ -7,7 +7,7 @@
 	(title_block
 		(title "Non Nemo Chimera Wired")
 		(date "2025-04-21")
-		(rev "0.2.0")
+		(rev "0.2.1")
 	)
 	(lib_symbols
 		(symbol "Connector:USB_C_Receptacle_PowerOnly_6P"

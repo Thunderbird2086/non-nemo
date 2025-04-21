@@ -10,7 +10,7 @@
 	(title_block
 		(title "Non Nemo Chimera Wired")
 		(date "2025-04-21")
-		(rev "0.2.0")
+		(rev "0.2.1")
 		(company "Allen Choi")
 	)
 	(layers
@@ -42030,7 +42030,7 @@
 			(justify mirror)
 		)
 	)
-	(gr_text "Non Nemo 0.2.0"
+	(gr_text "Non Nemo 0.2.1"
 		(at 259.5 109.5 0)
 		(layer "B.SilkS")
 		(uuid "3263377b-2aab-4de8-b793-792ff8fa3710")
@@ -42042,7 +42042,7 @@
 			(justify mirror)
 		)
 	)
-	(gr_text "Non Nemo 0.2.0"
+	(gr_text "Non Nemo 0.2.1"
 		(at 50 109.5 0)
 		(layer "B.SilkS")
 		(uuid "3563e85d-37f2-4703-b820-a9981a93bdff")

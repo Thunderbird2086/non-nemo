@@ -1,6 +1,6 @@
 meta:
   author: Allen Choi
-  version: 0.2.0
+  version: 0.2.1
   engine: 4.1.0
   project: Non-Nemo Split Keyboard Chimera (wired)
 
@@ -12,7 +12,7 @@ text_common:
   version_text: &version_text
     <<: *base_text_android
     params:
-      text: 'Non Nemo 0.2.0'
+      text: 'Non Nemo 0.2.1'
       mirrored: true
 
   base_text: &base_text
