@@ -1,6 +1,6 @@
 meta:
   author: Allen Choi
-  version: 0.2.0
+  version: 0.2.1
   engine: 4.1.0
   project: Non-Nemo Split Keyboard Chimera (wired)
 
@@ -12,7 +12,7 @@ text_common:
   version_text: &version_text
     <<: *base_text_android
     params:
-      text: 'Non Nemo 0.2.0'
+      text: 'Non Nemo 0.2.1'
       mirrored: true
 
   base_text: &base_text
@@ -153,10 +153,6 @@ outlines:
       <<: *screw_base
       where: [matrix_middle_home]
       adjust: {shift: [-.5px, .5py]}
-    bottom_right:
-      <<: *screw_base
-      where: [matrix_inner_bottom]
-      adjust: {shift: [.5px, -.5py]}
     mcu_right:
       <<: *screw_base
       where: [matrix_inner_bottom]
@@ -180,14 +176,22 @@ outlines:
       where: [mirror_matrix_pinky_bottom]
     center_left:
       where: [mirror_matrix_middle_home]
-    bottom_right:
-      where: [mirror_matrix_inner_bottom]
     mcu_right:
       where: [mirror_matrix_inner_bottom]
     thumb_left:
       where: [mirror_cluster_esc_thumb]
     thumb_right:
       where: [mirror_cluster_space_thumb]
+
+  screw_hoeles_bottom_right_corner:
+    left_hand:
+      <<: *screw_base
+      where: [matrix_inner_bottom]
+      adjust: {shift: [.5px, -.5py]}
+    right_hand:
+      <<: *screw_base
+      where: [mirror_matrix_inner_bottom]
+      adjust: {shift: [-.5px, -.5py]}
 
   spacer_holes_left:
     top_right: &spacer_base
@@ -226,17 +230,21 @@ outlines:
 
   pcb_outline:
     - "pcb_raw"
+    - "-screw_holes_left"
+    - "-screw_holes_right"
     
   top:
     - "outline"
     - "breakaway_top"
     - "breakaway_bottom"
     - "-keys"
+    - "-screw_hoeles_bottom_right_corner"
 
   top_mx:
     - "top_mx_raw"
     - "-screw_holes_left"
     - "-screw_holes_right"
+    - "-screw_hoeles_bottom_right_corner"
     - "breakaway_top"
     - "breakaway_bottom"
     - "-keys_mx"
@@ -248,11 +256,10 @@ outlines:
 
   bottom:
     - "pcb_common"
-    - "-screw_holes_left"
-    - "-screw_holes_right"
+    - "-screw_hoeles_bottom_right_corner"
 
   pcb:
-    - "bottom"
+    - "pcb_common"
     - "-spacer_holes_left"
     - "-spacer_holes_right"
 
@@ -622,10 +629,10 @@ pcbs:
       edge: {outline: pcb, layer: Edge.Cuts}
     footprints:
       <<: *filled_zone
-#      <<: *mouse_bite
-#      <<: *mouse_bite_v
-#      <<: *mouse_bite_v1
-#      <<: *breakaway_text
+      <<: *mouse_bite
+      <<: *mouse_bite_v
+      <<: *mouse_bite_v1
+      <<: *breakaway_text
       hotswap_base: &hs_base
         what: MX_HS_1u
         where:
@@ -669,7 +676,7 @@ pcbs:
         what: r_smd_0805_2012m
         where: [matrix_inner_home]
         adjust:
-            shift: [1.3px+11.6, -3]
+            shift: [1.3px+11.6, -1.8]
             rotate: 90
         params:
           side: 'B'
@@ -680,7 +687,7 @@ pcbs:
         <<: *is_left_base
         where: [mirror_matrix_inner_home]
         adjust:
-            shift: [1.3px-11.6, -3]
+            shift: [1.3px-11.6, -1.8]
             rotate: -90
         params:
           side: 'B'
@@ -777,7 +784,7 @@ pcbs:
         params.side: B
         params.mirrored: true
         where: [matrix_inner_home]
-        adjust: {shift: [1.3px, -29]}
+        adjust: {shift: [1.3px-1, -23.5]}
       powered_by_r:
         <<: *powered_by
         where: [mirror_matrix_inner_home]
