@@ -10,7 +10,7 @@ FILE_DESCRIPTION(
 
 FILE_NAME(
 /* name */ 'Non Nemo Chimera Wired Shell Left Bottom.step',
-/* time_stamp */ '2025-04-21T21:22:33+08:00',
+/* time_stamp */ '2025-04-23T20:47:18+08:00',
 /* author */ (''),
 /* organization */ (''),
 /* preprocessor_version */ 'ST-DEVELOPER v20.1',
@@ -43,10 +43,10 @@ SHAPE_REPRESENTATION_RELATIONSHIP()
 #19=CONTEXT_DEPENDENT_SHAPE_REPRESENTATION(#17,#2889);
 #20=NEXT_ASSEMBLY_USAGE_OCCURRENCE('Left Bottom:1','Left Bottom:1',
 'Left Bottom:1',#2895,#2896,'Left Bottom:1');
-#21=NEXT_ASSEMBLY_USAGE_OCCURRENCE('Non Nemo Chimera Wired Shell v14:1',
-'Non Nemo Chimera Wired Shell v14:1',
-'Non Nemo Chimera Wired Shell v14:1',#2894,#2895,
-'Non Nemo Chimera Wired Shell v14:1');
+#21=NEXT_ASSEMBLY_USAGE_OCCURRENCE('Non Nemo Chimera Wired Shell v20:1',
+'Non Nemo Chimera Wired Shell v20:1',
+'Non Nemo Chimera Wired Shell v20:1',#2894,#2895,
+'Non Nemo Chimera Wired Shell v20:1');
 #22=SHAPE_REPRESENTATION_RELATIONSHIP('SRR','None',#2892,#23);
 #23=ADVANCED_BREP_SHAPE_REPRESENTATION('',(#26),#2876);
 #24=STYLED_ITEM('',(#2911),#26);
@@ -2987,18 +2987,18 @@ SOLID_ANGLE_UNIT()
 #2892=SHAPE_REPRESENTATION('',(#1704),#2876);
 #2893=PRODUCT_DEFINITION_CONTEXT('part definition',#2904,'design');
 #2894=PRODUCT_DEFINITION('Non Nemo Chimera Wired Shells - Export',
-'Non Nemo Chimera Wired Shells - Export v10',#2897,#2893);
+'Non Nemo Chimera Wired Shells - Export v12',#2897,#2893);
 #2895=PRODUCT_DEFINITION('Non Nemo Chimera Wired Shell',
-'Non Nemo Chimera Wired Shell v14',#2898,#2893);
+'Non Nemo Chimera Wired Shell v20',#2898,#2893);
 #2896=PRODUCT_DEFINITION('Left Bottom','Left Bottom',#2899,#2893);
 #2897=PRODUCT_DEFINITION_FORMATION('',$,#2906);
 #2898=PRODUCT_DEFINITION_FORMATION('',$,#2907);
 #2899=PRODUCT_DEFINITION_FORMATION('',$,#2908);
 #2900=PRODUCT_RELATED_PRODUCT_CATEGORY(
-'Non Nemo Chimera Wired Shells - Export v10',
-'Non Nemo Chimera Wired Shells - Export v10',(#2906));
+'Non Nemo Chimera Wired Shells - Export v12',
+'Non Nemo Chimera Wired Shells - Export v12',(#2906));
 #2901=PRODUCT_RELATED_PRODUCT_CATEGORY(
-'Non Nemo Chimera Wired Shell v14','Non Nemo Chimera Wired Shell v14',(#2907));
+'Non Nemo Chimera Wired Shell v20','Non Nemo Chimera Wired Shell v20',(#2907));
 #2902=PRODUCT_RELATED_PRODUCT_CATEGORY('Left Bottom','Left Bottom',(#2908));
 #2903=APPLICATION_PROTOCOL_DEFINITION('international standard',
 'automotive_design',2009,#2904);
@@ -3006,9 +3006,9 @@ SOLID_ANGLE_UNIT()
 'Core Data for Automotive Mechanical Design Process');
 #2905=PRODUCT_CONTEXT('part definition',#2904,'mechanical');
 #2906=PRODUCT('Non Nemo Chimera Wired Shells - Export',
-'Non Nemo Chimera Wired Shells - Export v10',$,(#2905));
+'Non Nemo Chimera Wired Shells - Export v12',$,(#2905));
 #2907=PRODUCT('Non Nemo Chimera Wired Shell',
-'Non Nemo Chimera Wired Shell v14',$,(#2905));
+'Non Nemo Chimera Wired Shell v20',$,(#2905));
 #2908=PRODUCT('Left Bottom','Left Bottom',$,(#2905));
 #2909=PRESENTATION_STYLE_ASSIGNMENT((#2913));
 #2910=PRESENTATION_STYLE_ASSIGNMENT((#2914));
