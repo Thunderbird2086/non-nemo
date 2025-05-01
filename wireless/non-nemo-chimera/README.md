@@ -35,6 +35,6 @@ Opitinal parts
 
 ## Case
 ### Plates
-![](../imgs/pcbs/chimera_top_mx.png)
-![](../imgs/pcbs/chimera_top.png)
-![](../imgs/pcbs/chimera_bottom.png)
+![](../../imgs/pcbs/chimera_top_mx.png)
+![](../../imgs/pcbs/chimera_top.png)
+![](../../imgs/pcbs/chimera_bottom.png)
