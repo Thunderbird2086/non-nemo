@@ -26,9 +26,9 @@ Opitinal parts
 | Pogopin 1x2          | 4            | Height 4.5mm     |
 
 ## PCB
-![](../imgs/pcbs/low_profile.png)
+![](../../imgs/pcbs/low_profile.png)
 
 ## Case
 ### Plates
-![](../imgs/pcbs/low_profile_top.png)
-![](../imgs/pcbs/low_profile_bottom.png)
+![](../../imgs/pcbs/low_profile_top.png)
+![](../../imgs/pcbs/low_profile_bottom.png)

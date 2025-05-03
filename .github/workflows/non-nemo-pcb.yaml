@@ -26,25 +26,25 @@ jobs:
       uses: INTI-CMNB/KiBot@v1.8.1
       with:
         config: .kibot.yaml
-        dir: non-nemo-chimera/gerber
-        board: non-nemo-chimera/non_nemo_chimera.kicad_pcb
-        schema: non-nemo-chimera/non_nemo_chimera.kicad_sch
+        dir: wireless/non-nemo-chimera/gerber
+        board: wireless/non-nemo-chimera/non_nemo_chimera.kicad_pcb
+        schema: wireless/non-nemo-chimera/non_nemo_chimera.kicad_sch
 
     - name: Generate gerber for Non Nemo Low profile
       uses: INTI-CMNB/KiBot@v1.8.1
       with:
         config: .kibot.yaml
-        dir: non-nemo-low/gerber
-        board: non-nemo-low/non_nemo_low.kicad_pcb
-        schema: non-nemo-low/non_nemo_low.kicad_sch
+        dir: wireless/non-nemo-low/gerber
+        board: wireless/non-nemo-low/non_nemo_low.kicad_pcb
+        schema: wireless/non-nemo-low/non_nemo_low.kicad_sch
 
     - name: Generate gerber for Non Nemo MX profile
       uses: INTI-CMNB/KiBot@v1.8.1
       with:
         config: .kibot.yaml
-        dir: non-nemo-mx/gerber
-        board: non-nemo-mx/non_nemo_mx.kicad_pcb
-        schema: non-nemo-mx/non_nemo_mx.kicad_sch
+        dir: wireless/non-nemo-mx/gerber
+        board: wireless/non-nemo-mx/non_nemo_mx.kicad_pcb
+        schema: wireless/non-nemo-mx/non_nemo_mx.kicad_sch
 
     - name: Generate gerber for Non Nemo Chimera Wired
       uses: INTI-CMNB/KiBot@v1.8.1
@@ -56,9 +56,9 @@ jobs:
 
     - name: Zip Gerber files
       run: |
-          zip -r --junk-paths non-nemo-chimera.zip non-nemo-chimera/gerber
-          zip -r --junk-paths non-nemo-low.zip non-nemo-low/gerber
-          zip -r --junk-paths non-nemo-mx.zip non-nemo-mx/gerber
+          zip -r --junk-paths non-nemo-chimera.zip wireless/non-nemo-chimera/gerber
+          zip -r --junk-paths non-nemo-low.zip wireless/non-nemo-low/gerber
+          zip -r --junk-paths non-nemo-mx.zip wireless/non-nemo-mx/gerber
           zip -r --junk-paths non-nemo-chimera-wired.zip wired/non-nemo-chimera/gerber
 
     - name: GH Release
