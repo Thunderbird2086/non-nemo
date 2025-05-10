@@ -1,6 +1,6 @@
 meta:
   author: Allen Choi
-  version: 0.2.0
+  version: 0.2.1
   engine: 4.1.0
   project: Non-Nemo Split Keyboard MX
 
@@ -12,7 +12,7 @@ text_common:
   version_text: &version_text
     <<: *base_text_android
     params:
-      text: 'Non Nemo 0.2.0'
+      text: 'Non Nemo 0.2.1'
       mirrored: true
 
   base_text: &base_text
@@ -151,10 +151,6 @@ outlines:
       <<: *screw_base
       where: [matrix_middle_home]
       adjust: {shift: [-.5px, .5py]}
-    bottom_right:
-      <<: *screw_base
-      where: [matrix_inner_bottom]
-      adjust: {shift: [.5px, -.5py]}
     mcu_right:
       <<: *screw_base
       where: [matrix_inner_bottom]
@@ -178,14 +174,52 @@ outlines:
       where: [mirror_matrix_pinky_bottom]
     center_left:
       where: [mirror_matrix_middle_home]
-    bottom_right:
-      where: [mirror_matrix_inner_bottom]
     mcu_right:
       where: [mirror_matrix_inner_bottom]
     thumb_left:
       where: [mirror_cluster_esc_thumb]
     thumb_right:
       where: [mirror_cluster_space_thumb]
+
+  screw_hoeles_bottom_right_corner:
+    left_hand:
+      <<: *screw_base
+      where: [matrix_inner_bottom]
+      adjust: {shift: [.5px, -.5py]}
+    right_hand:
+      <<: *screw_base
+      where: [mirror_matrix_inner_bottom]
+      adjust: {shift: [-.5px, -.5py]}
+
+  spacer_holes_left:
+    top_right: &spacer_base
+      what: circle
+      radius: 4.15
+      where: [matrix_inner_home]
+      adjust: {shift: [-.5px, .5py]}
+    top_left:
+      <<: *spacer_base
+      where: [matrix_ring_home]
+      adjust: {shift: [-.5px, .5py]}
+    bottom_left:
+      <<: *spacer_base
+      where: [matrix_middle_home]
+      adjust: {shift: [-.5px, -.5py]}
+    bottom_right:
+      <<: *spacer_base
+      where: [matrix_inner_bottom]
+      adjust: {shift: [.5px, -.5py]}
+    
+  spacer_holes_right:
+    $extends: outlines.spacer_holes_left
+    top_right:
+      where: [mirror_matrix_inner_home]
+    top_left:
+      where: [mirror_matrix_ring_home]
+    bottom_left:
+      where: [mirror_matrix_middle_home]
+    bottom_right:
+      where: [mirror_matrix_inner_bottom]
     
   outline:
     - "raw"
@@ -194,22 +228,29 @@ outlines:
 
   pcb_outline:
     - "pcb_raw"
+    - "-screw_holes_left"
+    - "-screw_holes_right"
     
   top:
     - "outline"
     - "breakaway_top"
     - "breakaway_bottom"
     - "-keys"
+    - "-screw_hoeles_bottom_right_corner"
 
-  pcb:
+  pcb_common:
     - "pcb_outline"
-    - "-screw_holes_left"
-    - "-screw_holes_right"
-    - "breakaway_top"
-    - "breakaway_bottom"
+#    - "breakaway_top"
+#    - "breakaway_bottom"
 
   bottom:
-    - "pcb"
+    - "pcb_common"
+    - "-screw_hoeles_bottom_right_corner"
+
+  pcb:
+    - "pcb_common"
+    - "-spacer_holes_left"
+    - "-spacer_holes_right"
 
 filled_zone: &filled_zone
   filled_zones:
@@ -571,7 +612,7 @@ pcbs:
   non_nemo_mx:
     template: kicad8
     outlines:
-      edge: {outline: bottom, layer: Edge.Cuts}
+      edge: {outline: pcb, layer: Edge.Cuts}
     footprints:
       <<: *filled_zone
       <<: *mouse_bite
@@ -593,11 +634,11 @@ pcbs:
 
       # MCU - XIAO NRF52840
       mcu_l: &mcu
-        what: "xiao_nrf52840"
+        what: "xiao_nrf52840_edgecut"
         where: matrix_inner_home
         adjust:
           shift: [1.3px, -5.41]
-        params: {designator: "MCU", show_3d: true, edgecut: true}
+        params: {designator: "MCU", show_3d: true, side: 'B'}
       mcu_r:
         <<: *mcu
         where: mirror_matrix_inner_home

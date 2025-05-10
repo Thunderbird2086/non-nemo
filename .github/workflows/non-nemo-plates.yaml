@@ -23,49 +23,49 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Generate gerber for Non Nemo Chimera Bottom plate
-      uses: INTI-CMNB/KiBot@v1.8.1
+      uses: INTI-CMNB/KiBot@v1.8.4
       with:
         config: .kibot.yaml
         dir: plates/chimera/gerber/bottom
         board: plates/chimera/bottom_chimera.kicad_pcb
 
     - name: Generate gerber for Non Nemo Chimera Top plate
-      uses: INTI-CMNB/KiBot@v1.8.1
+      uses: INTI-CMNB/KiBot@v1.8.4
       with:
         config: .kibot.yaml
         dir: plates/chimera/gerber/top
         board: plates/chimera/top_chimera.kicad_pcb
 
     - name: Generate gerber for Non Nemo Chimera Top MX plate
-      uses: INTI-CMNB/KiBot@v1.8.1
+      uses: INTI-CMNB/KiBot@v1.8.4
       with:
         config: .kibot.yaml
         dir: plates/chimera/gerber/top_mx
         board: plates/chimera/top_chimera_mx.kicad_pcb
 
     - name: Generate gerber for Non Nemo Low Profile Bottom plate
-      uses: INTI-CMNB/KiBot@v1.8.1
+      uses: INTI-CMNB/KiBot@v1.8.4
       with:
         config: .kibot.yaml
         dir: plates/low-profile/gerber/bottom
         board: plates/low-profile/bottom_low.kicad_pcb
 
     - name: Generate gerber for Non Nemo Chimera Top plate
-      uses: INTI-CMNB/KiBot@v1.8.1
+      uses: INTI-CMNB/KiBot@v1.8.4
       with:
         config: .kibot.yaml
         dir: plates/low-profile/gerber/top
         board: plates/low-profile/top_low.kicad_pcb
 
     - name: Generate gerber for Non Nemo Low Profile Bottom plate
-      uses: INTI-CMNB/KiBot@v1.8.1
+      uses: INTI-CMNB/KiBot@v1.8.4
       with:
         config: .kibot.yaml
         dir: plates/mx/gerber/bottom
         board: plates/mx/bottom_mx.kicad_pcb
 
     - name: Generate gerber for Non Nemo Chimera Top plate
-      uses: INTI-CMNB/KiBot@v1.8.1
+      uses: INTI-CMNB/KiBot@v1.8.4
       with:
         config: .kibot.yaml
         dir: plates/mx/gerber/top
