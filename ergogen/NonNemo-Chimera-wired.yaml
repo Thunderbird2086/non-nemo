@@ -737,14 +737,6 @@ pcbs:
         <<: *pogo_tag
         where: [mirror_matrix_inner_home]
         adjust.rotate: -90
-      text_bat_l: &text_bat
-        <<: *base_text_tiny
-        where: [matrix_inner_home]
-        adjust:
-            shift: [1.3px+13.1, -18.9]
-        params.text: 'B+'
-        params.mirrored: true
-        params.side: B
       text_rst_l: &text_rst
         <<: *base_text_tiny
         where: [matrix_inner_home]
@@ -753,9 +745,6 @@ pcbs:
         params.text: 'RST'
         params.mirrored: true
         params.side: B
-      text_bat_r:
-        <<: *text_bat
-        where: [mirror_matrix_inner_home]
       text_rst_r:
         <<: *text_rst
         where: [mirror_matrix_inner_home]
