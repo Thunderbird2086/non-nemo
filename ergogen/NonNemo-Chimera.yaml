@@ -113,6 +113,31 @@ outlines:
       size: [3px, 2.5py]
       fillet: corner
 
+  battery: &battery
+    - <<: *rect_base
+      where:
+        - matrix_pinky_bottom
+        - matrix_ring_bottom
+        - matrix_middle_bottom
+        - matrix_index_bottom
+      adjust: {shift: [0, -py-2]}
+      size: [1.2px, 1.2py]
+    - <<: *rect_base
+      where: [matrix_pinky_bottom]
+      adjust: {shift: [0, -.5py]}
+      size: [1.2px, 1.2py]
+    - <<: *battery
+      where:
+        - mirror_matrix_pinky_bottom
+        - mirror_matrix_ring_bottom
+        - mirror_matrix_middle_bottom
+        - mirror_matrix_index_bottom
+    - <<: *rect_base
+      where: [mirror_matrix_pinky_bottom]
+      adjust: {shift: [0, -.5py]}
+      size: [1.2px, 1.2py]
+      fillet: corner
+
   pcb_raw: &pcb_raw
     - <<: *raw
     - <<: *pcb_mcu
@@ -153,6 +178,10 @@ outlines:
       <<: *screw_base
       where: [matrix_middle_home]
       adjust: {shift: [-.5px, .5py]}
+    battery_left:
+      <<: *screw_base
+      where: [matrix_pinky_bottom]
+      adjust: {shift: [-.5px, -1.5py-2]}
     mcu_right:
       <<: *screw_base
       where: [matrix_inner_bottom]
@@ -173,6 +202,8 @@ outlines:
     top_left:
       where: [mirror_matrix_pinky_top]
     bottom_left:
+      where: [mirror_matrix_pinky_bottom]
+    battery_left:
       where: [mirror_matrix_pinky_bottom]
     center_left:
       where: [mirror_matrix_middle_home]
@@ -260,6 +291,14 @@ outlines:
 
   pcb:
     - "pcb_common"
+    - "-spacer_holes_left"
+    - "-spacer_holes_right"
+
+  case:
+    - "pcb_raw"
+    - "battery"
+    - "-screw_holes_left"
+    - "-screw_holes_right"
     - "-spacer_holes_left"
     - "-spacer_holes_right"
 
